@@ -1,0 +1,9 @@
+{
+  "name": "mis-website",
+  "version": "1.0.0",
+  "description": "Mission International School Website",
+  "scripts": {},
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

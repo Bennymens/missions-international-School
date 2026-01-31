@@ -1,0 +1,292 @@
+/* CSS for Contact Page */
+
+/* Reuse variables and basic styles from home.css */
+
+/* --- Contact Hero Split --- */
+.contact-hero-split {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    /* Full viewport height */
+    overflow: hidden;
+}
+
+.contact-image-side {
+    width: 40%;
+    position: relative;
+    background-color: #ddd;
+}
+
+.contact-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.contact-content-side {
+    width: 60%;
+    padding: 8rem 0 0 0;
+    /* Top, Right=0, Bottom=0, Left=0 */
+    background-color: #fffcf8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 0;
+}
+
+.nav-spacer {
+    height: 60px;
+    /* Adjust if needed */
+}
+
+.hero-text-wrapper {
+    margin-bottom: 4rem;
+    padding-left: 4rem;
+    /* Move text to the right */
+}
+
+.section-label {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background-color: rgba(255, 179, 71, 0.2);
+    color: #8b4513;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+}
+
+.contact-hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    line-height: 1.1;
+    color: #2c2416;
+}
+
+/* --- Compact Grid (Inside Hero) --- */
+.contact-grid-compact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    /* No space between cards */
+    border-top: 1px solid #ccc;
+    /* Unify border color */
+    border-left: 1px solid #ccc;
+    /* Left border for grid */
+    padding-top: 0;
+    /* Remove padding inside grid */
+    width: 100%;
+    margin-top: 0;
+    /* Spacing handled by justify-content: space-between */
+}
+
+.contact-card-compact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: transparent;
+    /* Or white if needed, design seems minimalist */
+    border: none;
+    /* Reset full border */
+    border-right: 1px solid #ccc;
+    /* Right border */
+    border-bottom: 1px solid #ccc;
+    /* Bottom border */
+    padding: 0;
+    /* Padding handled inside to allow button to be full width */
+    height: 100%;
+    /* Ensure uniform height if grid allows */
+}
+
+.contact-card-content {
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+    /* Reduced padding top/bottom */
+    flex-grow: 1;
+}
+
+.contact-card-compact .contact-icon {
+    font-size: 1.4rem;
+    color: #ffb347;
+    margin-bottom: 0.5rem;
+    /* Reduced from 0.8rem */
+}
+
+.contact-card-compact h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+    /* Reduced from 0.4rem */
+    color: #2c2416;
+    line-height: 1.2;
+}
+
+.contact-card-compact p {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    /* Slightly smaller font */
+    color: #666;
+    margin-bottom: 0.5rem;
+    /* Reduced from 1rem */
+    line-height: 1.4;
+}
+
+.contact-link-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: #5c4033;
+    text-decoration: none;
+    background-color: #f5f0e6;
+    /* Button background */
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0.8rem;
+    /* Reduced from 1rem */
+    border-top: 1px solid #eee;
+    transition: all 0.3s ease;
+    /* No border-radius */
+}
+
+.contact-link-text:hover {
+    background-color: #ebe4d6;
+    color: #2c2416;
+}
+
+
+/* --- Contact Form Section --- */
+.contact-form-section {
+    background-color: #ffb347;
+    /* The specific orange color */
+    padding: 6rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.form-card {
+    background-color: #fffcf8;
+    padding: 4rem;
+    max-width: 1200px;
+    /* Increased from 1000px */
+    margin: 0 auto;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.form-label {
+    display: inline-block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #8b4513;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.form-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #2c2416;
+}
+
+.main-contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 2rem;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-group label {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    color: #5c4033;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.input-group input,
+.input-group textarea {
+    background-color: #f9f7f2;
+    /* Very light beige/gray */
+    border: none;
+    padding: 1rem;
+    font-family: 'Inter', sans-serif;
+    color: #5c4033;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    outline: none;
+    background-color: #f0ede6;
+}
+
+.submit-btn {
+    background-color: #ffb347;
+    /* Match section bg? Or Darker? Screenshot looks like it matches or is slightly different. Let's use darker for contrast or same orange if button is separate. Detailed screenshot shows "Send a Message" button looks beige/orange? Actually looks like same orange section bg. Let's use the Background Orange but maybe a bit darker/lighter or stick to consistent button style */
+    /* Screenshot 3 shows the button is actually OUTSIDE the white card but still inside orange section? NO, it's inside the card but full width at the bottom. */
+    /* Wait, looking at "Send a Message" in screenshot 3... The button background matches the SECTION background color (orange). */
+    background-color: #ffb347;
+    color: #2c2416;
+    border: none;
+    padding: 1.2rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: filter 0.3s ease;
+}
+
+.submit-btn:hover {
+    filter: brightness(0.95);
+}
+
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-hero-title {
+        font-size: 3rem;
+    }
+
+    .form-card {
+        padding: 2rem;
+    }
+
+    .two-col {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}

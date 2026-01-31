@@ -1,0 +1,343 @@
+/* ===== ACADEMICS PAGE SPECIFIC STYLES ===== */
+
+/* Hero Section - Simplified */
+.hero-image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+  background: linear-gradient(
+    135deg,
+    var(--bg-peach-tint),
+    var(--accent-color)
+  );
+}
+
+.hero-image-placeholder .placeholder-icon {
+  font-size: 6rem;
+  opacity: 0.6;
+}
+
+.hero-image-placeholder .placeholder-text {
+  font-size: 1.3rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+/* Services Section - 4 Column Grid */
+.services-section {
+  padding: var(--spacing-xl) 0;
+  background: var(--bg-white);
+}
+
+.services-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.service-box {
+  text-align: center;
+  padding: var(--spacing-lg);
+}
+
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.service-box-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+  color: var(--text-dark);
+}
+
+.service-box-description {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.6;
+}
+
+.service-box-link {
+  display: inline-block;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color var(--transition-base);
+}
+
+.service-box-link:hover {
+  color: var(--primary-dark);
+}
+
+/* Curriculum Section */
+.curriculum-section {
+  padding: var(--spacing-2xl) 0;
+  background: var(--bg-white);
+}
+
+.section-header-center {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.section-label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: var(--spacing-xs);
+}
+
+.section-label-center {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: var(--spacing-md);
+}
+
+.section-title-large {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.2;
+}
+
+/* Programs Section - Orange Background */
+.programs-section {
+  padding: var(--spacing-2xl) 0;
+  background: var(--primary-color);
+}
+
+.programs-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  margin-top: var(--spacing-lg);
+}
+
+.program-box {
+  background: white;
+  padding: var(--spacing-lg);
+  border-radius: 0;
+  border: 1px solid var(--accent-dark);
+}
+
+.program-icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.program-box-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-dark);
+}
+
+.program-box-description {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Subjects Section */
+.subjects-section {
+  padding: var(--spacing-2xl) 0;
+  background: var(--primary-color);
+}
+
+.subjects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  margin-top: var(--spacing-lg);
+}
+
+.subject-box {
+  background: white;
+  padding: var(--spacing-lg);
+  border-radius: 0;
+  border: 1px solid var(--accent-dark);
+}
+
+.subject-icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.subject-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-dark);
+}
+
+.subject-description {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* CTA Banner */
+.cta-banner {
+  padding: var(--spacing-xl) 0;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--primary-dark)
+  );
+  text-align: center;
+}
+
+.cta-banner-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+/* Grade Levels Section */
+.grade-levels-section {
+  background: var(--bg-white);
+}
+
+.grade-levels-section .section-header-center {
+  padding: var(--spacing-2xl) 0;
+}
+
+.grade-split {
+  display: flex;
+  width: 100%;
+  min-height: 500px;
+}
+
+.grade-split-reverse {
+  flex-direction: row-reverse;
+}
+
+.grade-content-side {
+  flex: 0 0 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xl);
+}
+
+.grade-orange {
+  background: var(--primary-color);
+}
+
+.grade-cream {
+  background: var(--accent-color);
+}
+
+.grade-content-wrapper {
+  max-width: 500px;
+}
+
+.grade-number {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 700;
+  font-family: var(--font-serif);
+  margin-bottom: var(--spacing-xs);
+}
+
+.grade-label {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: var(--spacing-sm);
+}
+
+.grade-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  line-height: 1.2;
+}
+
+.grade-image-side {
+  flex: 0 0 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.grade-image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+  background: linear-gradient(
+    135deg,
+    var(--bg-peach-tint),
+    var(--accent-color)
+  );
+}
+
+.grade-image-placeholder .placeholder-icon {
+  font-size: 5rem;
+  opacity: 0.6;
+}
+
+.grade-image-placeholder .placeholder-text {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .services-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .programs-grid-4,
+  .subjects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grade-split,
+  .grade-split-reverse {
+    flex-direction: column;
+  }
+
+  .grade-content-side,
+  .grade-image-side {
+    flex: 0 0 100%;
+  }
+
+  .grade-image-side {
+    min-height: 300px;
+  }
+
+  .grade-title {
+    font-size: 2.5rem;
+  }
+
+  .section-title-large {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .services-grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-banner-title {
+    font-size: 2rem;
+  }
+}
+/* Move this file to the css directory */

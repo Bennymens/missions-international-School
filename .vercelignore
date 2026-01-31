@@ -1,0 +1,2 @@
+# Ignore server.js for Vercel static deployment
+server.js

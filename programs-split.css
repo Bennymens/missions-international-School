@@ -1,0 +1,119 @@
+/* ===== PROGRAMS SPLIT-SCREEN LAYOUT ===== */
+.program-split {
+  display: flex;
+  width: 100%;
+  min-height: 500px;
+}
+
+.program-split-reverse {
+  flex-direction: row-reverse;
+}
+
+.program-image-side {
+  flex: 0 0 50%;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-cream);
+}
+
+.program-image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+  background: linear-gradient(
+    135deg,
+    var(--bg-peach-tint),
+    var(--accent-color)
+  );
+  border: 3px dashed var(--primary-light);
+}
+
+.program-image-placeholder .placeholder-icon {
+  font-size: 5rem;
+  opacity: 0.6;
+}
+
+.program-image-placeholder .placeholder-text {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.program-content-side {
+  flex: 0 0 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xl);
+  background: var(--bg-white);
+}
+
+.program-content-wrapper {
+  max-width: 500px;
+}
+
+.program-number {
+  font-size: 1rem;
+  color: var(--primary-color);
+  font-weight: 700;
+  font-family: var(--font-serif);
+  margin-bottom: var(--spacing-sm);
+  letter-spacing: 2px;
+}
+
+.program-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+  color: var(--text-dark);
+  line-height: 1.2;
+}
+
+.program-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-lg);
+}
+
+.program-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all var(--transition-base);
+}
+
+.program-link:hover {
+  color: var(--primary-dark);
+  gap: var(--spacing-sm);
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .program-split,
+  .program-split-reverse {
+    flex-direction: column;
+  }
+
+  .program-image-side,
+  .program-content-side {
+    flex: 0 0 100%;
+  }
+
+  .program-image-side {
+    min-height: 300px;
+  }
+
+  .program-title {
+    font-size: 2rem;
+  }
+}
+/* Move this file to the css directory */
