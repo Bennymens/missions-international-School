@@ -15,10 +15,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/home.css" />
-    <link rel="stylesheet" href="css/media-cards.css" />
-    <link rel="stylesheet" href="css/programs-split.css" />
-    <link rel="stylesheet" href="css/admissions.css" />
-    <link rel="stylesheet" href="css/academics.css" />
+    <!-- <link rel="stylesheet" href="css/media-cards.css" /> -->
+    <!-- <link rel="stylesheet" href="css/programs-split.css" /> -->
+    <!-- <link rel="stylesheet" href="css/admissions.css" /> -->
+    <!-- <link rel="stylesheet" href="css/academics.css" /> -->
   </head>
 
   <body>
@@ -26,7 +26,7 @@
     <nav class="navbar" id="navbar">
       <div class="nav-container">
         <div class="logo">
-          <a href="home.html">
+          <a href="index.html">
             <img src="images/MIS logo.png" alt="MIS Logo" class="logo-img" />
           </a>
         </div>
@@ -50,404 +50,164 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
-      <div class="hero-split">
-        <div class="hero-image-side">
-          <img
-            src="C:/Users/PC/.gemini/antigravity/brain/a26bcee8-6def-44f1-b0d9-b8aef52bc69e/school_campus_1769805935725.png"
-            alt="Mission International School Campus"
-            class="hero-main-image"
-          />
-          <div class="hero-image-overlay">
-            <h3>Unlocking True Potential Through Individual Strengths</h3>
-            <p>
+    <section class="hero-section">
+      <div class="hero-split-container">
+        <!-- Left Side: Image -->
+        <div class="hero-image-wrapper">
+          <img src="images/campus.png" alt="Campus" class="hero-img-full" />
+        </div>
+
+        <!-- Right Side: Content -->
+        <div class="hero-content-wrapper">
+          <div class="hero-text-content">
+            <h1 class="main-heading">
+              Unlocking True<br />Potential Through<br />Individual Strengths
+            </h1>
+            <p class="hero-subtext">
               We nurture each student's unique strengths, helping them grow into
               confident, capable individuals ready to succeed.
             </p>
-          </div>
-        </div>
-        <div class="hero-content-side">
-          <div class="hero-content-wrapper">
-            <p class="hero-subtitle">Welcome to MIS</p>
-            <h1 class="hero-title">Mission International School</h1>
-            <p class="hero-description">
-              Empowering students to become global citizens through innovative
-              education, character development, and academic excellence.
-            </p>
-            <div class="hero-buttons">
-              <button class="btn btn-primary" id="explorBtn">
-                Explore Campus
-              </button>
-              <button class="btn btn-secondary" id="watchDemoBtn">
-                <span class="play-icon">▶</span>
-                Virtual Tour
-              </button>
-            </div>
-            <div class="hero-stats">
-              <div class="stat-item">
-                <div class="stat-number" data-target="1200">0</div>
-                <div class="stat-label">Students</div>
+
+            <div class="hero-stats-row">
+              <div class="stat-box">
+                <h3 class="stat-title">High Graduation Rate</h3>
+                <p class="stat-desc">
+                  We prepare students for success with a strong graduation rate.
+                </p>
               </div>
-              <div class="stat-item">
-                <div class="stat-number" data-target="85">0</div>
-                <div class="stat-label">Teachers</div>
+              <div class="stat-box">
+                <h3 class="stat-title">Personalized Attention</h3>
+                <p class="stat-desc">
+                  We ensure focused learning with a low student-teacher ratio.
+                </p>
               </div>
-              <div class="stat-item">
-                <div class="stat-number" data-target="98">0</div>
-                <div class="stat-label">Success Rate</div>
+              <div class="stat-box">
+                <h3 class="stat-title">Active Engagement</h3>
+                <p class="stat-desc">
+                  We boost development with high extracurricular participation.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="scroll-indicator">
-        <div class="mouse">
-          <div class="wheel"></div>
-        </div>
+
+      <!-- Bottom Action Bars -->
+      <div class="hero-action-bars">
+        <a href="#enroll" class="action-bar action-primary">
+          <span>Enroll Today</span>
+        </a>
+        <a href="#about" class="action-bar action-secondary">
+          <span>About School</span>
+        </a>
       </div>
     </section>
 
     <!-- Academics Section -->
-    <section class="features" id="academics">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Academic Excellence</h2>
-          <p class="section-subtitle">
-            Comprehensive curriculum designed to nurture every student's
-            potential
-          </p>
+    <section class="split-section" id="academics">
+      <div class="split-container">
+        <!-- Left Side: Content -->
+        <div class="split-content-side">
+          <div class="content-inner">
+            <span class="section-tag">• Academic Programs</span>
+            <h2 class="section-heading">
+              Fostering Excellence<br />Through Innovative<br />Learning
+              Experiences
+            </h2>
+            <p class="section-text">
+              Explore our programs that ignite curiosity and drive success. With
+              innovative teaching and support, we foster a thriving environment
+              for student excellence.
+            </p>
+          </div>
         </div>
-        <div class="features-grid">
-          <div class="feature-card feature-card-image" data-aos="fade-up">
-            <div class="feature-image-wrapper">
-              <img
-                src="C:/Users/PC/.gemini/antigravity/brain/a26bcee8-6def-44f1-b0d9-b8aef52bc69e/stem_classroom_1769805953453.png"
-                alt="STEM Programs"
-                class="feature-image"
-              />
-              <div class="feature-overlay">
-                <div class="feature-icon">📚</div>
-              </div>
-            </div>
-            <div class="feature-content">
-              <h3 class="feature-title">STEM Programs</h3>
-              <p class="feature-description">
-                Advanced Science, Technology, Engineering, and Mathematics
-                curriculum with hands-on learning experiences.
-              </p>
-            </div>
-          </div>
-          <div
-            class="feature-card feature-card-image"
-            data-aos="fade-up"
-            data-delay="100"
-          >
-            <div class="feature-image-wrapper">
-              <img
-                src="C:/Users/PC/.gemini/antigravity/brain/a26bcee8-6def-44f1-b0d9-b8aef52bc69e/arts_program_1769805970468.png"
-                alt="Arts & Culture"
-                class="feature-image"
-              />
-              <div class="feature-overlay">
-                <div class="feature-icon">🎨</div>
-              </div>
-            </div>
-            <div class="feature-content">
-              <h3 class="feature-title">Arts & Culture</h3>
-              <p class="feature-description">
-                Comprehensive arts program including music, drama, visual arts,
-                and cultural studies.
-              </p>
-            </div>
-          </div>
-          <div class="feature-card" data-aos="fade-up" data-delay="200">
-            <div class="feature-icon">🌍</div>
-            <h3 class="feature-title">Global Curriculum</h3>
-            <p class="feature-description">
-              International standards-based education preparing students for a
-              globalized world.
-            </p>
-          </div>
-          <div class="feature-card" data-aos="fade-up" data-delay="300">
-            <div class="feature-icon">⚽</div>
-            <h3 class="feature-title">Sports & Wellness</h3>
-            <p class="feature-description">
-              State-of-the-art sports facilities and comprehensive physical
-              education programs.
-            </p>
-          </div>
-          <div class="feature-card" data-aos="fade-up" data-delay="400">
-            <div class="feature-icon">💻</div>
-            <h3 class="feature-title">Digital Learning</h3>
-            <p class="feature-description">
-              Modern technology-integrated classrooms with smart learning tools
-              and resources.
-            </p>
-          </div>
-          <div class="feature-card" data-aos="fade-up" data-delay="500">
-            <div class="feature-icon">🏆</div>
-            <h3 class="feature-title">Leadership Development</h3>
-            <p class="feature-description">
-              Character-building programs that develop future leaders and
-              responsible citizens.
-            </p>
-          </div>
+
+        <!-- Right Side: Image -->
+        <div class="split-image-side">
+          <img
+            src="images/66fa4fa2c2d1e95d04538683_pexels-julia-m-cameron-4144929.avif"
+            alt="Academics Section"
+            class="section-img-full"
+          />
         </div>
       </div>
-    </section>
-
-    <!-- Campus Gallery Section -->
-    <section class="campus-gallery">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Our Campus</h2>
-          <p class="section-subtitle">
-            Experience the beauty and innovation of Mission International School
-          </p>
-        </div>
-        <div class="gallery-grid">
-          <div class="gallery-item gallery-large">
-            <img
-              src="C:/Users/PC/.gemini/antigravity/brain/a26bcee8-6def-44f1-b0d9-b8aef52bc69e/school_campus_1769805935725.png"
-              alt="School Campus"
-              class="gallery-image"
-            />
-            <div class="gallery-caption">
-              <h3>Modern Campus</h3>
-              <p>State-of-the-art facilities designed for learning</p>
-            </div>
-          </div>
-          <div class="gallery-item">
-            <div class="video-placeholder">
-              <div class="play-button">▶</div>
-              <div class="video-caption">Campus Tour Video</div>
-            </div>
-          </div>
-          <div class="gallery-item">
-            <div class="video-placeholder">
-              <div class="play-button">▶</div>
-              <div class="video-caption">Student Life</div>
-            </div>
-          </div>
-          <div class="gallery-item">
-            <div class="image-placeholder">
-              <div class="placeholder-icon">📸</div>
-              <div class="placeholder-text">Library & Study Areas</div>
-            </div>
-          </div>
-          <div class="gallery-item">
-            <div class="image-placeholder">
-              <div class="placeholder-icon">📸</div>
-              <div class="placeholder-text">Sports Facilities</div>
-            </div>
-          </div>
-          <div class="gallery-item">
-            <div class="image-placeholder">
-              <div class="placeholder-icon">📸</div>
-              <div class="placeholder-text">Science Labs</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Programs Section -->
-    <section class="services" id="programs">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Our Programs</h2>
-          <p class="section-subtitle">
-            Educational pathways for every stage of learning
-          </p>
-        </div>
-      </div>
-
-      <!-- Primary School Program -->
-      <div class="program-split">
-        <div class="program-image-side">
-          <div class="program-image-placeholder">
-            <div class="placeholder-icon">🎒</div>
-            <div class="placeholder-text">Primary School Image</div>
-          </div>
-        </div>
-        <div class="program-content-side">
-          <div class="program-content-wrapper">
-            <div class="program-number">01</div>
-            <h3 class="program-title">Primary School</h3>
-            <p class="program-description">
-              Foundation years focusing on core skills, creativity, and social
-              development in a nurturing environment. Our primary program builds
-              strong academic foundations while fostering curiosity and love for
-              learning.
-            </p>
-            <a href="#" class="program-link">Learn More →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Middle School Program -->
-      <div class="program-split program-split-reverse">
-        <div class="program-content-side">
-          <div class="program-content-wrapper">
-            <div class="program-number">02</div>
-            <h3 class="program-title">Middle School</h3>
-            <p class="program-description">
-              Comprehensive curriculum building critical thinking, academic
-              rigor, and personal growth. Students develop independence and
-              prepare for advanced studies through engaging, challenging
-              coursework.
-            </p>
-            <a href="#" class="program-link">Learn More →</a>
-          </div>
-        </div>
-        <div class="program-image-side">
-          <div class="program-image-placeholder">
-            <div class="placeholder-icon">📚</div>
-            <div class="placeholder-text">Middle School Image</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- High School Program -->
-      <div class="program-split">
-        <div class="program-image-side">
-          <div class="program-image-placeholder">
-            <div class="placeholder-icon">🎓</div>
-            <div class="placeholder-text">High School Image</div>
-          </div>
-        </div>
-        <div class="program-content-side">
-          <div class="program-content-wrapper">
-            <div class="program-number">03</div>
-            <h3 class="program-title">High School</h3>
-            <p class="program-description">
-              Advanced placement courses and university preparation with
-              personalized guidance and support. Students engage in rigorous
-              academics while developing leadership skills and exploring their
-              passions.
-            </p>
-            <a href="#" class="program-link">Learn More →</a>
-          </div>
-        </div>
+      <!-- Bottom Action Bar -->
+      <div class="section-action-bar">
+        <a href="academics.html" class="action-bar action-light">
+          <span>Explore Academics</span>
+        </a>
       </div>
     </section>
 
     <!-- About Section -->
-    <section class="about" id="about">
-      <div class="container">
-        <div class="about-content">
-          <div class="about-text">
-            <h2 class="section-title">About Mission International School</h2>
-            <p class="about-description">
-              Founded with a vision to provide world-class education, Mission
-              International School has been nurturing young minds for
-              excellence. We combine academic rigor with character development
-              to prepare students for success in an ever-changing world.
+    <section class="split-section" id="about">
+      <div class="split-container">
+        <!-- Left Side: Content -->
+        <div class="split-content-side">
+          <div class="content-inner">
+            <span class="section-tag">• About School</span>
+            <h2 class="section-heading">
+              Uncover the History<br />and Vision That Drive<br />Our School
+              Forward
+            </h2>
+            <p class="section-text">
+              Dive into our school's story, exploring the history, mission, and
+              values that shape our community. Learn how our passionate team and
+              shared goals contribute to our ongoing success.
             </p>
-            <p class="about-description">
-              Our dedicated faculty, modern facilities, and innovative teaching
-              methods create an environment where every student can thrive and
-              reach their full potential.
-            </p>
-            <div class="about-features">
-              <div class="about-feature">
-                <span class="check-icon">✓</span>
-                <span>Internationally accredited curriculum</span>
-              </div>
-              <div class="about-feature">
-                <span class="check-icon">✓</span>
-                <span>Experienced & caring faculty</span>
-              </div>
-              <div class="about-feature">
-                <span class="check-icon">✓</span>
-                <span>State-of-the-art facilities</span>
-              </div>
-            </div>
-          </div>
-          <div class="about-visual">
-            <div class="visual-card card-1"></div>
-            <div class="visual-card card-2"></div>
-            <div class="visual-card card-3"></div>
           </div>
         </div>
+
+        <!-- Right Side: Image -->
+        <div class="split-image-side">
+          <img
+            src="images/66fa5063e44a93083c4c27e6_pexels-max-fischer-5212687.avif"
+            alt="About School Section"
+            class="section-img-full"
+          />
+        </div>
+      </div>
+      <!-- Bottom Action Bar -->
+      <div class="section-action-bar">
+        <a href="about.html" class="action-bar action-light">
+          <span>About School</span>
+        </a>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Get In Touch</h2>
-          <p class="section-subtitle">
-            Have questions? We'd love to hear from you.
-          </p>
-        </div>
-        <div class="contact-content">
-          <form class="contact-form" id="contactForm">
-            <div class="form-group">
-              <input
-                type="text"
-                id="name"
-                class="form-input"
-                placeholder="Parent/Guardian Name"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <input
-                type="email"
-                id="email"
-                class="form-input"
-                placeholder="Email Address"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <input
-                type="text"
-                id="subject"
-                class="form-input"
-                placeholder="Subject"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <textarea
-                id="message"
-                class="form-input form-textarea"
-                placeholder="Your Message"
-                rows="5"
-                required
-              ></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-full">
-              Send Message
-            </button>
-          </form>
-          <div class="contact-info">
-            <div class="info-item">
-              <div class="info-icon">📧</div>
-              <div class="info-content">
-                <h4>Email</h4>
-                <p>admissions@mis.edu</p>
-              </div>
-            </div>
-            <div class="info-item">
-              <div class="info-icon">📞</div>
-              <div class="info-content">
-                <h4>Phone</h4>
-                <p>+1 (555) 789-0123</p>
-              </div>
-            </div>
-            <div class="info-item">
-              <div class="info-icon">📍</div>
-              <div class="info-content">
-                <h4>Location</h4>
-                <p>456 Education Lane, Learning City</p>
-              </div>
-            </div>
+    <!-- Academics Section (Duplicate) -->
+    <!-- Admissions Section -->
+    <section class="split-section" id="admissions-2">
+      <div class="split-container">
+        <!-- Left Side: Content -->
+        <div class="split-content-side">
+          <div class="content-inner">
+            <span class="section-tag">• Admissions</span>
+            <h2 class="section-heading">
+              Explore the Admission Process<br />and Join Our Vibrant Community
+            </h2>
+            <p class="section-text">
+              Learn about our straightforward admission process and find out how
+              you can become part of our dynamic and welcoming community. We’re
+              excited to guide you every step of the way.
+            </p>
           </div>
         </div>
+
+        <!-- Right Side: Image -->
+        <div class="split-image-side">
+          <img
+            src="images/66fa4ffe9501731ffc84cd56_pexels-august-de-richelieu-4260323.avif"
+            alt="Discover Admissions Section"
+            class="section-img-full"
+          />
+        </div>
+      </div>
+      <!-- Bottom Action Bar -->
+      <div class="section-action-bar">
+        <a href="admissions.html" class="action-bar action-light">
+          <span>Discover Admissions</span>
+        </a>
       </div>
     </section>
 
@@ -492,6 +252,13 @@
           </div>
         </div>
         <div class="footer-bottom">
+          <div class="footer-logo-wrapper">
+            <img
+              src="images/MIS logo.png"
+              alt="MIS Logo"
+              class="footer-logo-img"
+            />
+          </div>
           <p>&copy; 2026 Mission International School. All rights reserved.</p>
         </div>
       </div>
