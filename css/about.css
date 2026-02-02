@@ -1,225 +1,226 @@
 /* CSS for About Page */
 
 :root {
-    --mis-dark-brown: #2c2416;
-    --mis-cream: #fffcf8;
-    --mis-orange: #ffb347;
-    --mis-text-gray: #666;
+  --mis-dark-brown: #2c2416;
+  --mis-cream: #fffcf8;
+  --mis-orange: #ffb347;
+  --mis-text-gray: #666;
 }
 
 /* --- Hero Grid Layout --- */
 .about-hero-grid-section {
-    display: flex;
-    min-height: 100vh;
-    width: 100%;
-    background-color: var(--mis-cream);
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--mis-cream);
 }
 
 .hero-left-sidebar {
-    width: 35%;
-    /* Building image width */
-    height: auto;
-    overflow: hidden;
+  width: 35%;
+  /* Building image width */
+  height: auto;
+  overflow: hidden;
 }
 
 .hero-building-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .hero-right-content {
-    width: 65%;
-    display: flex;
-    flex-direction: column;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
 }
 
 .hero-text-block {
-    padding: 8rem 6rem;
-    flex-grow: 1;
-    /* Takes up available space */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: var(--mis-cream);
+  padding: 8rem 6rem;
+  flex-grow: 1;
+  /* Takes up available space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--mis-cream);
 }
 
 .about-main-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 5rem;
-    line-height: 1.1;
-    color: var(--mis-dark-brown);
-    margin-bottom: 2rem;
+  font-family: "Playfair Display", serif;
+  font-size: 5rem;
+  line-height: 1.1;
+  color: var(--mis-dark-brown);
+  margin-bottom: 2rem;
 }
 
 .about-main-desc {
-    font-family: 'Inter', sans-serif;
-    color: #666;
-    max-width: 500px;
-    line-height: 1.6;
-    font-size: 1.1rem;
+  font-family: "Inter", sans-serif;
+  color: #666;
+  max-width: 500px;
+  line-height: 1.6;
+  font-size: 1.1rem;
 }
 
 .hero-image-row {
-    display: flex;
-    height: 500px;
-    /* Specific height for bottom images */
+  display: flex;
+  height: 500px;
+  /* Specific height for bottom images */
 }
 
 .hero-sub-image-wrapper {
-    width: 50%;
-    position: relative;
-    overflow: hidden;
+  width: 50%;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-sub-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.5s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
 }
 
 .hero-sub-image-wrapper:hover .hero-sub-img {
-    transform: scale(1.05);
-    /* Subtle zoom effect */
+  transform: scale(1.05);
+  /* Subtle zoom effect */
 }
-
 
 /* --- Values Section (Dark) --- */
 .values-section {
-    background-color: var(--mis-dark-brown);
-    color: var(--mis-cream);
-    padding: 8rem 0;
+  background-color: var(--mis-dark-brown);
+  color: var(--mis-cream);
+  padding: 8rem 0;
 }
 
 .values-main-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    text-align: center;
-    margin-bottom: 6rem;
-    line-height: 1.2;
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 6rem;
+  line-height: 1.2;
 }
 
 .values-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-    max-width: 1000px;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .valu-row {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    gap: 4rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 4rem;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 4rem;
 }
 
 .valu-row:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 .valu-label {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
-    color: #ae9f8e;
-    /* Muted beige */
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  color: #ae9f8e;
+  /* Muted beige */
 }
 
 .valu-text {
-    font-family: 'Inter', sans-serif;
-    line-height: 1.7;
-    color: #dcd6ce;
-    font-size: 1.05rem;
+  font-family: "Inter", sans-serif;
+  line-height: 1.7;
+  color: #dcd6ce;
+  font-size: 1.05rem;
 }
 
 .valu-intro {
-    font-family: 'Inter', sans-serif;
-    line-height: 1.7;
-    color: #dcd6ce;
-    margin-bottom: 3rem;
-    font-size: 1.05rem;
+  font-family: "Inter", sans-serif;
+  line-height: 1.7;
+  color: #dcd6ce;
+  margin-bottom: 3rem;
+  font-size: 1.05rem;
 }
 
 .core-values-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
 }
 
 .core-value-item h4 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.2rem;
-    color: var(--mis-orange);
-    margin-bottom: 0.5rem;
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  color: var(--mis-orange);
+  margin-bottom: 0.5rem;
 }
 
 .core-value-item p {
-    font-family: 'Inter', sans-serif;
-    font-size: 0.95rem;
-    color: #999;
-    line-height: 1.5;
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  color: #999;
+  line-height: 1.5;
 }
-
 
 /* --- Leadership Section --- */
 .leadership-section {
-    background-color: var(--mis-cream);
-    padding: 6rem 0 0 0;
-    /* Removing bottom padding to flow into footer or next section */
+  background-color: var(--mis-cream);
+  padding: 6rem 0 0 0;
+  /* Removing bottom padding to flow into footer or next section */
 }
 
 .leadership-header {
-    text-align: center;
-    margin-bottom: 4rem;
+  text-align: center;
+  margin-bottom: 4rem;
 }
 
 .section-label-simple {
-    display: inline-block;
-    padding: 0.4rem 1rem;
-    background-color: rgba(255, 179, 71, 0.2);
-    color: #8b4513;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 1rem;
-    font-weight: 600;
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background-color: rgba(255, 179, 71, 0.2);
+  color: #8b4513;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  font-weight: 600;
 }
 
 .section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    color: var(--mis-dark-brown);
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  color: var(--mis-dark-brown);
 }
 
 .leadership-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
 }
 
 .leader-item {
-    aspect-ratio: 16/9;
-    /* Or adjust based on image looks. Square or landscape. The design looks landscape-ish */
-    /* Wait, screenshots show the text block is square-ish. Let's try 1:1 or auto height */
-    min-height: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  aspect-ratio: 16/9;
+  /* Or adjust based on image looks. Square or landscape. The design looks landscape-ish */
+  /* Wait, screenshots show the text block is square-ish. Let's try 1:1 or auto height */
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .text-block {
-    background-color: #fffcf8;
-    padding: 4rem;
+  background-color: #fffcf8;
+  padding: 4rem;
+  height: auto;
+  aspect-ratio: auto;
+  align-items: flex-start;
 }
 
-.leader-item:nth-child(4n+1),
-.leader-item:nth-child(4n+4) {
-    /* Correct checkerboard logic for 2 columns:
+.leader-item:nth-child(4n + 1),
+.leader-item:nth-child(4n + 4) {
+  /* Correct checkerboard logic for 2 columns:
        Row 1: Text(1) | Img(2)
        Row 2: Img(3)  | Text(4) 
     */
@@ -231,336 +232,442 @@
 */
 
 .img-block img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .leader-info h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
-    color: var(--mis-dark-brown);
-    margin-bottom: 0.2rem;
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  color: var(--mis-dark-brown);
+  margin-bottom: 0.2rem;
 }
 
 .leader-role {
-    display: block;
-    font-family: 'Inter', sans-serif;
-    color: #888;
-    font-size: 0.9rem;
-    margin-bottom: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+  display: block;
+  font-family: "Inter", sans-serif;
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .leader-stats {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
 }
 
 .stat strong {
-    display: block;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    color: var(--mis-dark-brown);
+  display: block;
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  color: var(--mis-dark-brown);
 }
 
 .stat span {
-    font-family: 'Inter', sans-serif;
-    font-size: 0.8rem;
-    color: #777;
+  font-family: "Inter", sans-serif;
+  font-size: 0.8rem;
+  color: #777;
 }
 
 .leader-bio {
-    font-family: 'Inter', sans-serif;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: #555;
-    border-top: 1px solid #eee;
-    padding-top: 1.5rem;
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+  border-top: 1px solid #eee;
+  padding-top: 1.5rem;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
+.mobile-only {
+  display: none;
+}
 
 /* --- Managing Director Message Section --- */
 .director-message-section {
-    background-color: #fffcf8;
-    padding: 8rem 0;
+  background-color: #fffcf8;
+  padding: 8rem 0;
 }
 
 .director-content-wrapper {
-    max-width: 900px;
-    margin: 0 auto;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .director-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 4rem;
-    gap: 2rem;
-    border-bottom: 2px solid var(--mis-orange);
-    padding-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 4rem;
+  gap: 2rem;
+  border-bottom: 2px solid var(--mis-orange);
+  padding-bottom: 2rem;
 }
 
 .director-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #fff;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .director-heading {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    color: var(--mis-dark-brown);
-    margin-bottom: 0.5rem;
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  color: var(--mis-dark-brown);
+  margin-bottom: 0.5rem;
 }
 
 .director-role {
-    font-family: 'Inter', sans-serif;
-    font-size: 1rem;
-    text-transform: uppercase;
-    color: #888;
-    letter-spacing: 1px;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #888;
+  letter-spacing: 1px;
 }
 
 .director-letter {
-    font-family: 'Inter', sans-serif;
-    color: #444;
-    line-height: 1.8;
-    font-size: 1.05rem;
+  font-family: "Inter", sans-serif;
+  color: #444;
+  line-height: 1.8;
+  font-size: 1.05rem;
 }
 
 .director-greeting {
-    font-weight: 700;
-    color: var(--mis-dark-brown);
-    margin-bottom: 1.5rem;
-    font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--mis-dark-brown);
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .director-letter p {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .director-list {
-    margin: 2rem 0 3rem 0;
-    padding-left: 2rem;
+  margin: 2rem 0 3rem 0;
+  padding-left: 2rem;
 }
 
 .director-list li {
-    margin-bottom: 1rem;
-    padding-left: 0.5rem;
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
 }
 
 .director-signoff {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    color: var(--mis-dark-brown);
-    font-weight: 600;
-    margin-top: 2rem;
-    font-style: italic;
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  color: var(--mis-dark-brown);
+  font-weight: 600;
+  margin-top: 2rem;
+  font-style: italic;
 }
 
 .director-closing {
-    font-weight: 600;
-    margin-top: 1rem;
+  font-weight: 600;
+  margin-top: 1rem;
 }
 
 /* --- Footer CTA Bar --- */
 .footer-cta-bar {
-    background-color: #ffcc80;
-    /* Light orange/peach match screenshot */
-    padding: 3rem 0;
+  background-color: #ffcc80;
+  /* Light orange/peach match screenshot */
+  padding: 3rem 0;
 }
 
 .footer-cta-bar h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    color: #8b4513;
-    margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: #8b4513;
+  margin: 0;
 }
-
-
 
 /* --- Motto Section --- */
 .motto-section {
-    background-color: #ffcc80;
-    /* Light Orange/Peach */
-    padding: 8rem 0;
-    text-align: center;
-    color: var(--mis-dark-brown);
+  background-color: #ffcc80;
+  /* Light Orange/Peach */
+  padding: 8rem 0;
+  text-align: center;
+  color: var(--mis-dark-brown);
 }
 
 .motto-label {
-    display: block;
-    font-family: 'Inter', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 600;
-    margin-bottom: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+  display: block;
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .motto-quote {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    line-height: 1.3;
-    max-width: 900px;
-    margin: 0 auto 3rem auto;
-    font-weight: 500;
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  line-height: 1.3;
+  max-width: 900px;
+  margin: 0 auto 3rem auto;
+  font-weight: 500;
 }
 
 .motto-author {
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-size: 0.9rem;
-    font-weight: 500;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
-
 
 /* --- History Timeline Sections --- */
 .history-split {
-    display: flex;
-    width: 100%;
-    min-height: 80vh;
-    /* Consistent height for history sections */
+  display: flex;
+  width: 100%;
+  min-height: 80vh;
+  /* Consistent height for history sections */
 }
 
 .history-image-side {
-    width: 50%;
-    position: relative;
+  width: 50%;
+  position: relative;
 }
 
 .history-image-side img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .history-content-side {
-    width: 50%;
-    background-color: #fffcf8;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 6rem;
+  width: 50%;
+  background-color: #fffcf8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6rem;
 }
 
 .history-year {
-    font-family: 'Playfair Display', serif;
-    font-size: 6rem;
-    color: var(--mis-dark-brown);
-    line-height: 1;
-    margin-bottom: 1rem;
+  font-family: "Playfair Display", serif;
+  font-size: 6rem;
+  color: var(--mis-dark-brown);
+  line-height: 1;
+  margin-bottom: 1rem;
 }
 
 .history-subtitle {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    color: #8b4513;
-    margin-bottom: 2rem;
-    font-weight: 400;
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: #8b4513;
+  margin-bottom: 2rem;
+  font-weight: 400;
 }
 
 .history-desc {
-    font-family: 'Inter', sans-serif;
-    color: #555;
-    line-height: 1.7;
-    max-width: 450px;
+  font-family: "Inter", sans-serif;
+  color: #555;
+  line-height: 1.7;
+  max-width: 450px;
 }
 
 /* --- Responsive --- */
 @media (max-width: 900px) {
-    .about-hero-grid-section {
-        flex-direction: column;
-        height: auto;
-    }
+  .about-hero-grid-section {
+    flex-direction: column;
+    height: auto;
+  }
 
-    .hero-left-sidebar,
-    .hero-right-content {
-        width: 100%;
-    }
+  .hero-left-sidebar,
+  .hero-right-content {
+    width: 100%;
+  }
 
-    .hero-left-sidebar {
-        height: 300px;
-    }
+  .hero-left-sidebar {
+    height: 300px;
+  }
 
-    .hero-text-block {
-        padding: 4rem 2rem;
-    }
+  .hero-text-block {
+    padding: 4rem 2rem;
+  }
 
-    .about-main-title {
-        font-size: 3rem;
-    }
+  .about-main-title {
+    font-size: 3rem;
+  }
 
-    .hero-image-row {
-        height: 300px;
-    }
+  .hero-image-row {
+    height: 300px;
+  }
 
-    .history-split {
-        flex-direction: column !important;
-        /* Force column on mobile */
-        height: auto;
-        min-height: auto;
-    }
+  .history-split {
+    flex-direction: column !important;
+    /* Force column on mobile */
+    height: auto;
+    min-height: auto;
+  }
 
-    .history-image-side,
-    .history-content-side {
-        width: 100%;
-    }
+  .history-split .history-image-side {
+    order: 0;
+  }
 
-    .history-image-side {
-        height: 400px;
-    }
+  .history-split .history-content-side {
+    order: 1;
+  }
 
-    .history-content-side {
-        padding: 4rem 2rem;
-    }
+  .history-image-side,
+  .history-content-side {
+    width: 100%;
+  }
 
-    .history-year {
-        font-size: 5rem;
-    }
+  .history-image-side {
+    height: 400px;
+  }
 
-    .director-header {
-        flex-direction: column;
-        text-align: center;
-    }
+  .history-content-side {
+    padding: 4rem 2rem;
+  }
 
-    .director-heading {
-        font-size: 2rem;
-    }
+  .history-year {
+    font-size: 5rem;
+  }
 
-    .motto-quote {
-        font-size: 1.8rem;
-    }
+  .director-header {
+    flex-direction: column;
+    text-align: center;
+  }
 
-    .valu-row {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
+  .director-heading {
+    font-size: 2rem;
+  }
 
-    .core-values-grid {
-        grid-template-columns: 1fr;
-    }
+  .motto-quote {
+    font-size: 1.8rem;
+  }
 
-    .leadership-grid {
-        grid-template-columns: 1fr;
-    }
+  .values-main-title {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+  }
 
-    .leader-item {
-        min-height: auto;
-        /* Let text expand naturally */
-    }
+  .valu-label {
+    font-size: 1.4rem;
+  }
 
-    .text-block {
-        padding: 3rem 2rem;
-    }
+  .valu-text,
+  .valu-intro {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
 
-    .img-block {
-        height: 400px;
-    }
+  .core-value-item h4 {
+    font-size: 1.05rem;
+  }
+
+  .core-value-item p {
+    font-size: 0.9rem;
+  }
+
+  .valu-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .core-values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .leadership-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Stack each leader image above its text on mobile */
+  .leadership-grid .leader-item {
+    order: 0;
+  }
+
+  /* Pair 1: text(1) + img(2) -> img above text */
+  .leadership-grid .leader-item:nth-child(1) {
+    order: 2;
+  }
+  .leadership-grid .leader-item:nth-child(2) {
+    order: 1;
+  }
+
+  /* Pair 2: img(3) + text(4) -> already correct */
+  .leadership-grid .leader-item:nth-child(3) {
+    order: 3;
+  }
+  .leadership-grid .leader-item:nth-child(4) {
+    order: 4;
+  }
+
+  /* Pair 3: text(5) + img(6) -> img above text */
+  .leadership-grid .leader-item:nth-child(5) {
+    order: 6;
+  }
+  .leadership-grid .leader-item:nth-child(6) {
+    order: 5;
+  }
+
+  /* Pair 4: img(7) + text(8) -> already correct */
+  .leadership-grid .leader-item:nth-child(7) {
+    order: 7;
+  }
+  .leadership-grid .leader-item:nth-child(8) {
+    order: 8;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .leader-info h3 {
+    font-size: 1.4rem;
+  }
+
+  .leader-role {
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .leader-stats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .stat strong {
+    font-size: 1.2rem;
+  }
+
+  .stat span {
+    font-size: 0.75rem;
+  }
+
+  .leader-bio {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .mobile-only {
+    display: inline;
+  }
+
+  .leader-item {
+    min-height: auto;
+    /* Let text expand naturally */
+  }
+
+  .text-block {
+    padding: 3rem 1.5rem;
+  }
+
+  .img-block {
+    height: 400px;
+  }
 }
