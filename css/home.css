@@ -1,4 +1,19 @@
 /* Improved Footer Layout */
+footer.footer {
+  background: #7c4a03;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.footer .footer-title,
+.footer .footer-description,
+.footer .footer-links a,
+.footer .logo-text,
+.footer-bottom p {
+  color: #fff !important;
+}
+
 footer.footer .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -87,11 +102,57 @@ footer.footer .footer-bottom {
   width: 100%;
   padding: 0;
   margin: 0;
+  flex: 1.155;
+  display: flex;
+  align-items: stretch;
 }
 /* Stretch Explore Academics image to the left */
 .split-section#academics .split-image-side .section-img-full {
-  width: 120%;
-  margin-left: -10%;
+  width: 140%;
+  margin-left: -20%;
+  height: 820px;
+}
+/* Remove min-height for academics section */
+.split-section#academics .split-container {
+  min-height: auto;
+}
+/* About section styling */
+.split-section#about .split-image-side {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  flex: 1.155;
+  display: flex;
+  align-items: stretch;
+}
+/* Stretch About image to the left */
+.split-section#about .split-image-side .section-img-full {
+  width: 140%;
+  margin-left: -20%;
+  height: 100%;
+}
+/* Remove min-height for about section */
+.split-section#about .split-container {
+  min-height: auto;
+}
+/* Admissions section styling */
+.split-section#admissions-2 .split-image-side {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  flex: 1.155;
+  display: flex;
+  align-items: stretch;
+}
+/* Stretch Admissions image to the left */
+.split-section#admissions-2 .split-image-side .section-img-full {
+  width: 140%;
+  margin-left: -20%;
+  height: 100%;
+}
+/* Remove min-height for admissions section */
+.split-section#admissions-2 .split-container {
+  min-height: auto;
 }
 /* ===== CSS VARIABLES & RESET ===== */
 :root {
@@ -122,6 +183,13 @@ body {
   color: var(--color-text-dark);
   background-color: var(--color-bg-light);
   line-height: 1.6;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 h1,
@@ -271,7 +339,7 @@ a {
 
 /* Left Side: Image (Mobile First: Top) */
 .hero-image-wrapper {
-  flex: 1;
+  flex: 1.16;
   position: relative;
   overflow: hidden;
 }
@@ -285,10 +353,10 @@ a {
 
 /* Reduce height of the first hero image only */
 .hero-image-wrapper img.hero-img-full:first-child {
-  height: 852px;
-  max-height: 852px;
-  width: 200%;
-  max-width: 200%;
+  height: 763px;
+  max-height: 763px;
+  width: 250%;
+  max-width: 250%;
   margin-bottom: 0;
   margin-left: -80px;
   object-position: left;
@@ -385,12 +453,18 @@ a {
 .split-section {
   position: relative;
   width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .split-container {
   display: flex;
   width: 100%;
   min-height: 80vh;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+  align-items: stretch;
 }
 
 .split-content-side {
@@ -494,7 +568,7 @@ a {
   }
 
   .hero-image-wrapper {
-    height: 50vh;
+    height: 500px;
     order: -1;
   }
 
@@ -505,6 +579,19 @@ a {
 
   .split-image-side {
     height: 50vh;
+  }
+
+  /* Longer hero image on mobile */
+  .hero-image-wrapper img.hero-img-full:first-child {
+    height: 500px;
+  }
+
+  /* Shorter split section images on mobile */
+  .split-section#academics .split-image-side .section-img-full,
+  .split-section#about .split-image-side .section-img-full,
+  .split-section#admissions-2 .split-image-side .section-img-full {
+    height: 350px;
+    min-height: 350px;
   }
 
   .section-action-bar {
