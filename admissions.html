@@ -260,6 +260,155 @@
       </div>
     </section>
 
+    <!-- Scholarships Section -->
+    <section class="scholarships-requirements">
+      <div class="requirements-header">
+        <p class="section-label-center">Financial Aid</p>
+        <h2 class="section-title-large">Scholarships Information</h2>
+        <p class="scholarships-intro-text">
+          Mission International School is committed to making quality education
+          accessible. We offer various scholarship opportunities for deserving
+          students based on academic excellence, athletic achievement, financial
+          need, and talent in the arts and leadership. Our scholarships can
+          cover up to 50% of tuition, helping talented students from all
+          backgrounds join our community. Click on any scholarship to learn
+          about eligibility requirements.
+        </p>
+      </div>
+
+      <div class="requirements-grid scholarships-grid">
+        <!-- Academic Excellence -->
+        <div
+          class="req-card req-header-card bg-orange scholarship-card"
+          data-scholarship="academic"
+        >
+          <h3>Academic Excellence</h3>
+        </div>
+        <div class="req-card">
+          <h3 class="req-value">Up to 50%</h3>
+          <p class="req-label">Tuition Coverage</p>
+        </div>
+        <div class="req-card">
+          <h3 class="req-value">Merit-Based</h3>
+          <p class="req-label">Award Type</p>
+        </div>
+
+        <!-- Athletic Excellence -->
+        <div
+          class="req-card req-header-card bg-yellow scholarship-card"
+          data-scholarship="athletic"
+        >
+          <h3>Athletic Excellence</h3>
+        </div>
+        <div class="req-card">
+          <h3 class="req-value">Up to 40%</h3>
+          <p class="req-label">Tuition Coverage</p>
+        </div>
+        <div class="req-card">
+          <h3 class="req-value">Sports Performance</h3>
+          <p class="req-label">Award Type</p>
+        </div>
+
+        <!-- Need-Based Aid -->
+        <div
+          class="req-card req-header-card bg-red req-span-2-rows scholarship-card"
+          data-scholarship="need-based"
+        >
+          <h3>Need-Based Aid</h3>
+        </div>
+
+        <div class="req-card">
+          <h3 class="req-value">Customized</h3>
+          <p class="req-label">Per Family Basis</p>
+        </div>
+        <div class="req-card">
+          <h3 class="req-value">Financial Need</h3>
+          <p class="req-label">Award Type</p>
+        </div>
+
+        <!-- Implicit Row -->
+        <div
+          class="req-card scholarship-card"
+          data-scholarship="arts-leadership"
+        >
+          <h3 class="req-value">Arts & Leadership</h3>
+          <p class="req-label">Up to 30% Coverage</p>
+        </div>
+        <div class="req-card">
+          <h3 class="req-value">All Programs</h3>
+          <p class="req-label">Available to All Grades</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scholarship Modals -->
+    <div class="scholarship-modal" id="academic-modal">
+      <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <h3>Academic Excellence Scholarship</h3>
+        <h4>Eligibility Requirements:</h4>
+        <ul>
+          <li>Minimum 3.8 GPA</li>
+          <li>Outstanding performance in standardized tests (SAT/ACT)</li>
+          <li>Strong letters of recommendation from teachers</li>
+          <li>Essay demonstrating academic passion and goals</li>
+          <li>Commitment to maintaining GPA throughout enrollment</li>
+        </ul>
+        <button class="modal-apply-btn">Apply Now</button>
+      </div>
+    </div>
+
+    <div class="scholarship-modal" id="athletic-modal">
+      <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <h3>Athletic Excellence Scholarship</h3>
+        <h4>Eligibility Requirements:</h4>
+        <ul>
+          <li>Demonstrated athletic excellence in recognized sports</li>
+          <li>Minimum 3.0 GPA</li>
+          <li>Coach recommendation and athletic assessment</li>
+          <li>Commitment to team participation and discipline</li>
+          <li>Video portfolio or competition records</li>
+        </ul>
+        <button class="modal-apply-btn">Apply Now</button>
+      </div>
+    </div>
+
+    <div class="scholarship-modal" id="need-based-modal">
+      <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <h3>Need-Based Aid</h3>
+        <h4>Eligibility Requirements:</h4>
+        <ul>
+          <li>Demonstrated financial need through FAFSA or equivalent</li>
+          <li>Minimum 2.5 GPA</li>
+          <li>Complete financial aid application and documentation</li>
+          <li>Family income assessment</li>
+          <li>Award amount customized based on individual circumstances</li>
+        </ul>
+        <button class="modal-apply-btn">Apply Now</button>
+      </div>
+    </div>
+
+    <div class="scholarship-modal" id="arts-leadership-modal">
+      <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <h3>Arts & Leadership Scholarship</h3>
+        <h4>Eligibility Requirements:</h4>
+        <ul>
+          <li>
+            Portfolio or audition demonstrating talent (music, drama, visual
+            arts)
+          </li>
+          <li>Leadership experience in school or community activities</li>
+          <li>Minimum 3.0 GPA</li>
+          <li>Teacher/mentor recommendation</li>
+          <li>Essay on artistic or leadership vision</li>
+        </ul>
+        <button class="modal-apply-btn">Apply Now</button>
+      </div>
+    </div>
+
     <!-- FAQ Section -->
     <section class="faq-section">
       <div class="container">
