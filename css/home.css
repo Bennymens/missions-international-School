@@ -28,9 +28,11 @@ body {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: linear-gradient(to bottom,
-      rgba(0, 0, 0, 0.6) 0%,
-      rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
   /* Transparent/Gradient initially */
   padding: 1rem 2rem;
   transition: all 0.3s ease;
@@ -40,6 +42,25 @@ body {
   background: #ffffff;
   padding: 0.5rem 2rem;
   /* Slightly shrink */
+}
+
+/* Force white navbar on pages that opt-in (non-home pages) */
+.white-nav .main-header {
+  background: #ffffff !important;
+  padding: 0.5rem 2rem;
+}
+.white-nav .nav-item {
+  color: var(--color-primary-blue) !important;
+}
+.white-nav .school-name,
+.white-nav .school-motto {
+  color: #333 !important;
+}
+.white-nav .brand-divider {
+  background-color: #333 !important;
+}
+.white-nav .hamburger span {
+  background-color: #333 !important;
 }
 
 /* Change text colors on scroll - but not in mobile menu */
@@ -137,7 +158,7 @@ body {
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-size: 0.85rem;
   /* GIS style is smaller text */
   transition: color 0.3s;
@@ -442,9 +463,11 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: linear-gradient(to top,
-      rgba(0, 0, 0, 0.85) 0%,
-      rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
   padding: 1.5rem;
   color: #fff;
 }
@@ -764,6 +787,15 @@ body {
   color: var(--color-accent-yellow);
 }
 
+/* Ensure the yellow hover applies on pages that opt-in to a white navbar
+   (they set `.white-nav .nav-item` with !important), and also when the
+   mobile menu is active. Use !important so page-specific CSS cannot block it. */
+.white-nav .nav-item:hover,
+.main-nav.active .nav-item:hover,
+.nav-list .nav-item:hover {
+  color: var(--color-accent-yellow) !important;
+}
+
 /* Dropdown */
 .has-dropdown {
   position: relative;
@@ -779,10 +811,16 @@ body {
   min-width: 200px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   display: none;
+  overflow: visible; /* allow flyout submenu to escape */
   border-top: 3px solid var(--color-accent-yellow);
 }
 
 .has-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Keep dropdown visible when parent has .open (used when flyout is active) */
+.has-dropdown.open .dropdown-menu {
   display: block;
 }
 
@@ -797,6 +835,86 @@ body {
 .dropdown-menu li a:hover {
   background-color: #f5f5f5;
   color: var(--color-primary-blue);
+}
+
+/* Submenu for nested "Schools" item */
+.has-dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu {
+  position: absolute;
+  top: 0;
+  left: calc(100% + 8px);
+  background-color: #fff;
+  list-style: none;
+  padding: 8px 0;
+  min-width: 200px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  display: none;
+  border-left: 3px solid var(--color-accent-yellow);
+  z-index: 2000; /* sit above header */
+}
+
+.has-dropdown-submenu:hover > .dropdown-submenu {
+  display: block;
+}
+
+/* Mobile: show submenu inside the stacked mobile menu when main nav is active */
+.main-nav .dropdown-submenu {
+  position: static;
+  box-shadow: none;
+  border-left: none;
+  display: none;
+}
+
+.main-nav.active .has-dropdown-submenu > .dropdown-submenu {
+  display: block;
+}
+
+/* Floating flyout that sits outside the About dropdown */
+.flyout,
+.schools-flyout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  min-width: 220px;
+  padding: 8px 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  z-index: 3000;
+  border-left: 4px solid var(--color-accent-yellow);
+}
+
+.flyout ul,
+.schools-flyout ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.flyout li a,
+.schools-flyout li a {
+  display: block;
+  padding: 10px 18px;
+  color: #333;
+  text-decoration: none;
+}
+
+.flyout li a:hover,
+.schools-flyout li a:hover {
+  background: #f5f5f5;
+  color: var(--color-primary-blue);
+}
+
+/* Disable floating flyout on small screens (use stacked submenu instead) */
+@media (max-width: 767px) {
+  .flyout,
+  .schools-flyout {
+    display: none !important;
+  }
 }
 
 /* Hamburger */
@@ -1195,7 +1313,6 @@ body {
 }
 
 @media (max-width: 768px) {
-
   .footer-top-grid,
   .footer-middle-grid {
     grid-template-columns: 1fr;
@@ -1339,9 +1456,11 @@ a {
   right: 0;
   z-index: 1000;
   padding: 1rem 0;
-  background: linear-gradient(to bottom,
-      rgba(255, 255, 255, 0.98),
-      rgba(240, 248, 255, 0.98));
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.98),
+    rgba(240, 248, 255, 0.98)
+  );
   backdrop-filter: blur(10px);
   border-bottom: 2px solid #ffd700;
   transition: all 0.3s ease;

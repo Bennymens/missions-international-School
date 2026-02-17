@@ -18,480 +18,128 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/home.css" />
     <link rel="stylesheet" href="css/about.css" />
   </head>
 
-  <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-      <div class="container nav-container">
-        <div class="logo">
-          <a href="home.html">
-            <img src="images/MIS logo.png" alt="MIS Logo" class="logo-img" />
+  <body class="white-nav">
+    <!-- New Header (GIS Style) -->
+    <header class="main-header">
+      <div class="header-container">
+        <div class="logo-area">
+          <a href="index.html" class="logo-link">
+            <div class="logo-wrapper">
+              <img
+                src="images/MIS logo.png"
+                alt="MIS Logo"
+                class="brand-logo"
+              />
+              <span class="school-motto">Motto:"Arise and Shine"</span>
+            </div>
+            <div class="brand-text">
+              <span class="school-name"
+                >Mission<br />International<br />School</span
+              >
+            </div>
+            <div class="brand-divider"></div>
           </a>
         </div>
-        <ul class="nav-menu" id="navMenu">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="academics.html" class="nav-link">Academics</a></li>
-          <li><a href="admissions.html" class="nav-link">Admissions</a></li>
-          <li><a href="about.html" class="nav-link active">About</a></li>
-          <li>
-            <a href="news-and-events.html" class="nav-link">News & Events</a>
-          </li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
-        <button class="cta-button">Apply Now</button>
+
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li><a href="index.html" class="nav-item">Home</a></li>
+            <li class="has-dropdown">
+              <a href="about.html" class="nav-item">About ▾</a>
+              <ul class="dropdown-menu">
+                <li><a href="about.html">Principles welcome message</a></li>
+                <li><a href="about-mis.html">About MIS</a></li>
+                <li><a href="our-history.html">Our History</a></li>
+                <li class="has-dropdown-submenu">
+                  <a href="#">Schools ▸</a>
+                  <ul class="dropdown-submenu">
+                    <li><a href="infant.html">Infant</a></li>
+                    <li><a href="junior.html">Junior</a></li>
+                    <li><a href="lower-secondary.html">Lower Secondary</a></li>
+                    <li><a href="upper-secondary.html">Upper Secondary</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="leadership-management.html"
+                    >Leadership & Management teams</a
+                  >
+                </li>
+                <li><a href="departments.html">Departments</a></li>
+                <li><a href="careers.html">Careers</a></li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <a href="admissions.html" class="nav-item">Admissions ▾</a>
+              <ul class="dropdown-menu">
+                <li><a href="admissions.html">How to Apply</a></li>
+                <li><a href="tuition-fees.html">Tuition & Fees</a></li>
+                <li><a href="visit-us.html">Visit Us</a></li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <a href="#" class="nav-item">The MIS Experience ▾</a>
+              <ul class="dropdown-menu">
+                <li class="has-dropdown-submenu">
+                  <a href="#">Staff Experience ▸</a>
+                </li>
+                <li class="has-dropdown-submenu">
+                  <a href="#">Student Experience ▸</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="boarding.html" class="nav-item">MIS Boarding</a></li>
+            <li class="has-dropdown">
+              <a href="#" class="nav-item">Parents ▾</a>
+              <ul class="dropdown-menu">
+                <li><a href="portal.html">Portal</a></li>
+                <li><a href="calendar.html">Calendar</a></li>
+                <li><a href="pta.html">PTA</a></li>
+              </ul>
+            </li>
+            <li><a href="alumni.html" class="nav-item">Alumni</a></li>
+            <script src="js/home.js"></script>
+            <li><a href="contact.html" class="nav-item">Contact Us</a></li>
+          </ul>
+        </nav>
+
         <div class="hamburger" id="hamburger">
           <span></span>
           <span></span>
           <span></span>
         </div>
       </div>
-    </nav>
+    </header>
 
-    <!-- About Hero Grid -->
-    <section class="about-hero-grid-section">
-      <div class="hero-left-sidebar">
-        <img
-          src="images/campus.png"
-          alt="Mission International School Building"
-          class="hero-building-img"
-        />
-      </div>
-      <div class="hero-right-content">
-        <div class="hero-text-block">
+    <!-- Principal Message (matching screenshot) -->
+    <section class="principal-message-section">
+      <div class="principal-wrapper">
+        <div class="principal-text-col">
           <div class="nav-spacer"></div>
-          <!-- Spacer if nav is fixed -->
-          <h1 class="about-main-title">
-            A Tradition of <br />Innovation and <br />Lifelong Learning
-          </h1>
-          <p class="about-main-desc">
-            Blending tradition and modern innovation, our school prepares
-            students to excel and thrive in a global world.
-          </p>
-        </div>
-        <div class="hero-image-row">
-          <div class="hero-sub-image-wrapper">
-            <img
-              src="images/students.png"
-              alt="Student with backpack"
-              class="hero-sub-img"
-            />
-          </div>
-          <div class="hero-sub-image-wrapper">
-            <img
-              src="images/classroom.png"
-              alt="Students playful"
-              class="hero-sub-img"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
+          <span class="principal-meta-label">A Message From</span>
+          <h1 class="principal-title">Our Principal</h1>
 
-    <!-- Motto Section -->
-    <section class="motto-section">
-      <div class="container">
-        <span class="motto-label">The Motto</span>
-        <blockquote class="motto-quote">
-          "Igniting Each Student's Potential, Cultivating Excellence in Every
-          Aspect, and Shaping Bright Futures Together"
-        </blockquote>
-        <cite class="motto-author">Mission International School</cite>
-      </div>
-    </section>
-
-    <!-- History Section: Feb 2015 (Opening) -->
-    <section class="history-split">
-      <div class="history-image-side">
-        <img src="images/campus.png" alt="Opening Ceremony 2015" />
-      </div>
-      <div class="history-content-side">
-        <div class="history-text-wrapper">
-          <div class="nav-spacer"></div>
-          <span class="section-label-light">The Beginning</span>
-          <h2 class="history-year">Feb. 15, 2015</h2>
-          <h3 class="history-subtitle">Opening Ceremony of MIS</h3>
-          <p class="history-desc">
-            The journey began with our official Opening Ceremony, marking the
-            start of Mission International School with our Preschool Program.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- History Section: Sep 2015 (Primary) -->
-    <section class="history-split history-alt">
-      <div class="history-content-side">
-        <div class="history-text-wrapper">
-          <div class="nav-spacer"></div>
-          <span class="section-label-light">Growth</span>
-          <h2 class="history-year">Sep. 6, 2015</h2>
-          <h3 class="history-subtitle">Start Primary Program</h3>
-          <p class="history-desc">
-            Shortly after opening, we expanded our offerings to include the
-            Primary Program, welcoming more students to our growing community.
-          </p>
-        </div>
-      </div>
-      <div class="history-image-side">
-        <img src="images/students.png" alt="Primary Program Start" />
-      </div>
-    </section>
-
-    <!-- History Section: Sep 2021 (JHS) -->
-    <section class="history-split">
-      <div class="history-image-side">
-        <img src="images/classroom.png" alt="JHS Program Start" />
-      </div>
-      <div class="history-content-side">
-        <div class="history-text-wrapper">
-          <div class="nav-spacer"></div>
-          <span class="section-label-light">Expansion</span>
-          <h2 class="history-year">Sep. 7, 2021</h2>
-          <h3 class="history-subtitle">Start JHS Program</h3>
-          <p class="history-desc">
-            Continuing our commitment to comprehensive education, we launched
-            the Junior High School program to support students through their
-            transitional years.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- History Section: Sep 2024 (SHS) -->
-    <section class="history-split history-alt">
-      <div class="history-content-side">
-        <div class="history-text-wrapper">
-          <div class="nav-spacer"></div>
-          <span class="section-label-light">Higher Heights</span>
-          <h2 class="history-year">Sep. 23, 2024</h2>
-          <h3 class="history-subtitle">Start SHS Program</h3>
-          <p class="history-desc">
-            We proudly commenced our Senior High School program, offering
-            advanced academic pathways and preparing students for university and
-            beyond.
-          </p>
-        </div>
-      </div>
-      <div class="history-image-side">
-        <img src="images/campus.png" alt="SHS Program Start" />
-      </div>
-    </section>
-
-    <!-- History Section: Mar 2025 (10th Anniversary) -->
-    <section class="history-split">
-      <div class="history-image-side">
-        <img src="images/students.png" alt="10th Anniversary" />
-      </div>
-      <div class="history-content-side">
-        <div class="history-text-wrapper">
-          <div class="nav-spacer"></div>
-          <span class="section-label-light">Milestone</span>
-          <h2 class="history-year">Mar. 04, 2025</h2>
-          <h3 class="history-subtitle">10th Anniversary Celebration</h3>
-          <p class="history-desc">
-            Celebrating a decade of excellence, faith, and transformative
-            education. We look back with gratitude and move forward with renewed
-            vision.
-          </p>
-        </div>
-      </div>
-    </section>
-    <!-- Values Section (Dark) -->
-    <section class="values-section">
-      <div class="container">
-        <h2 class="values-main-title">
-          The Cornerstones of <br />Our Commitment to a <br />Brighter Future
-        </h2>
-
-        <div class="values-grid">
-          <!-- Mission -->
-          <div class="valu-row">
-            <div class="valu-label">Mission</div>
-            <div class="valu-text">
-              <p>
-                To equip young Africans with Christ-Centered education that
-                shapes strong character, ignites creative business leadership
-                and empowers them to transform Africa's future.
-              </p>
-              <p style="margin-top: 1rem; font-style: italic; color: #ae9f8e">
-                MATTHEW 28 :19-20 “Therefore go and make disciples of all
-                nations baptizing them in the name of the Father of the Son, and
-                of the Holy Spirit”, verse 20 says, and teaching them to obey
-                everything (I have commanded you And surely I am with you always
-                to the very end of the age.
-              </p>
-            </div>
-          </div>
-
-          <!-- Vision -->
-          <div class="valu-row">
-            <div class="valu-label">Vision</div>
-            <div class="valu-text">
-              To raise a new generation of African leaders who will rebuild
-              Africa through unshakable faith, deep knowledge and divine wisdom.
-            </div>
-          </div>
-
-          <!-- Values -->
-          <div class="valu-row">
-            <div class="valu-label">Values</div>
-            <div class="valu-content-col">
-              <p class="valu-intro">
-                Our core values define who we are and shape every aspect of our
-                educational experience:
-              </p>
-
-              <div class="core-values-grid">
-                <div class="core-value-item">
-                  <h4>Christian Education</h4>
-                  <p>Rooted in faith and biblical principles.</p>
-                </div>
-                <div class="core-value-item">
-                  <h4>Holistic Education</h4>
-                  <p>Nurturing mind, body, and spirit.</p>
-                </div>
-                <div class="core-value-item">
-                  <h4>Mind-Set Transformation</h4>
-                  <p>Empowering students to think critically and creatively.</p>
-                </div>
-                <div class="core-value-item">
-                  <h4>Study Abroad Preparation</h4>
-                  <p>Equipping students for global opportunities.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Leadership Section -->
-    <section class="leadership-section">
-      <div class="container-fluid">
-        <!-- Full width container for checkerboard -->
-        <div class="leadership-header text-center">
-          <span class="section-label-simple">Leadership</span>
-          <h2 class="section-title">
-            Guiding Excellence <br />and Inspiring Growth
-          </h2>
-        </div>
-
-        <div class="leadership-grid">
-          <!-- Person 1: Text Left, Image Right -->
-          <div class="leader-item text-block">
-            <div class="leader-info">
-              <h3>Dr. Emily Roberts</h3>
-              <span class="leader-role">School Principal</span>
-
-              <div class="leader-stats">
-                <div class="stat">
-                  <strong>12+</strong>
-                  <span>Years in Leadership</span>
-                </div>
-                <div class="stat">
-                  <strong>5</strong>
-                  <span>Academic Programs</span>
-                </div>
-                <div class="stat">
-                  <strong>8</strong>
-                  <span>School Initiatives</span>
-                </div>
-                <div class="stat">
-                  <strong>10+</strong>
-                  <span>Innovative Strategies</span>
-                </div>
-              </div>
-
-              <p class="leader-bio">
-                With over 12 years in educational leadership,<br
-                  class="mobile-only"
-                />
-                Dr. Roberts fosters a thriving environment for<br
-                  class="mobile-only"
-                />
-                students and staff through innovation and<br
-                  class="mobile-only"
-                />
-                a strong commitment to excel
-              </p>
-            </div>
-          </div>
-          <div class="leader-item img-block">
-            <img src="images/classroom.png" alt="Dr. Emily Roberts" />
-          </div>
-
-          <!-- Person 2: Image Left, Text Right (Checkerboard) -->
-          <!-- Actually design might be Text | Image | Text | Image side-by-side if large screen? -->
-          <!-- Let's do standard checkerboard for visual interest -->
-          <div class="leader-item img-block">
-            <img src="images/students.png" alt="Mr. Jonathan Lee" />
-          </div>
-          <div class="leader-item text-block">
-            <div class="leader-info">
-              <h3>Mr. Jonathan Lee</h3>
-              <span class="leader-role">Vice Principal</span>
-
-              <div class="leader-stats">
-                <div class="stat">
-                  <strong>15</strong>
-                  <span>Years in Teaching</span>
-                </div>
-                <div class="stat">
-                  <strong>20+</strong>
-                  <span>Educational Programs</span>
-                </div>
-                <div class="stat">
-                  <strong>30</strong>
-                  <span>Support Initiatives</span>
-                </div>
-                <div class="stat">
-                  <strong>12+</strong>
-                  <span>School Culture Improvements</span>
-                </div>
-              </div>
-
-              <p class="leader-bio">
-                Mr. Lee's expertise in curriculum development<br
-                  class="mobile-only"
-                />
-                and student support enhances programs and<br
-                  class="mobile-only"
-                />
-                fosters a positive school culture, ensuring<br
-                  class="mobile-only"
-                />
-                all students receive the support.
-              </p>
-            </div>
-          </div>
-
-          <!-- Person 3 (Sarah): Text Left, Image Right -->
-          <div class="leader-item text-block">
-            <div class="leader-info">
-              <h3>Ms. Sarah Thompson</h3>
-              <span class="leader-role">Director of Curriculum</span>
-
-              <div class="leader-stats">
-                <div class="stat">
-                  <strong>24</strong>
-                  <span>Years in Teaching</span>
-                </div>
-                <div class="stat">
-                  <strong>15+</strong>
-                  <span>Curriculum Programs</span>
-                </div>
-                <div class="stat">
-                  <strong>12+</strong>
-                  <span>Academic Programs</span>
-                </div>
-                <div class="stat">
-                  <strong>29</strong>
-                  <span>Instructional Strategies</span>
-                </div>
-              </div>
-
-              <p class="leader-bio">
-                Ms. Thompson excels in creating dynamic<br
-                  class="mobile-only"
-                />
-                learning experiences and shaping academic<br
-                  class="mobile-only"
-                />
-                programs through her expertise in curriculum<br
-                  class="mobile-only"
-                />
-                design and instructional strategies.
-              </p>
-            </div>
-          </div>
-          <div class="leader-item img-block">
-            <img src="images/classroom.png" alt="Ms. Sarah Thompson" />
-          </div>
-
-          <!-- Person 4 (Jacques): Image Left, Text Right -->
-          <div class="leader-item img-block">
-            <img src="images/students.png" alt="Mr. Jacques Martinez" />
-          </div>
-          <div class="leader-item text-block">
-            <div class="leader-info">
-              <h3>Mr. Jacques Martinez</h3>
-              <span class="leader-role">Director of Student Services</span>
-
-              <div class="leader-stats">
-                <div class="stat">
-                  <strong>37</strong>
-                  <span>Years in Teaching</span>
-                </div>
-                <div class="stat">
-                  <strong>20+</strong>
-                  <span>Counseling Programs</span>
-                </div>
-                <div class="stat">
-                  <strong>120+</strong>
-                  <span>Activities Organized</span>
-                </div>
-                <div class="stat">
-                  <strong>15+</strong>
-                  <span>Programs Developed</span>
-                </div>
-              </div>
-
-              <p class="leader-bio">
-                Mr. Martinez supports student success by<br
-                  class="mobile-only"
-                />
-                overseeing counseling and extracurricular<br
-                  class="mobile-only"
-                />
-                activities, making sure they have the<br class="mobile-only" />
-                resources needed to excel.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Managing Director Message Section -->
-    <section class="director-message-section">
-      <div class="container">
-        <div class="director-content-wrapper">
-          <div class="director-header">
-            <div class="director-img-container">
-              <img
-                src="images/students.png"
-                alt="Managing Director"
-                class="director-img"
-              />
-            </div>
-            <div class="director-title-block">
-              <h2 class="director-heading">From the Managing Director</h2>
-              <h3 class="director-role">Managing Director</h3>
-            </div>
-          </div>
-
-          <div class="director-letter">
-            <p class="director-greeting">
-              Dear MIS Students and Respected Staff,
-            </p>
+          <div class="principal-text">
+            <p>Dear MIS Students and Respected Staff,</p>
 
             <p>
               Over the past ten years, by the grace of God, we have walked
               together with one goal: to raise a new generation prepared for the
               future. Through this journey, we have not merely pursued academic
-              excellence, but we have labored to shape world changers—people of
-              character, faith, and purpose.
-            </p>
-
-            <p>
-              Now we are standing at the threshold of the next decade—a decade
-              that will be unlike anything humanity has ever experienced.
-              Artificial intelligence and robotics will replace many traditional
-              jobs, and only those who are truly prepared will have the
-              opportunity to thrive in business and professional life.
+              excellence, but we have labored to shape world-changers — people
+              of character, faith, and purpose. Now, we are standing at the
+              threshold of the next decade — a decade that will be unlike
+              anything humanity has ever experienced. Artificial intelligence
+              and robotics will replace many traditional jobs, and only those
+              who are truly prepared will have the opportunity to thrive in
+              business and professional life.
             </p>
 
             <p>
@@ -500,7 +148,7 @@
               human beings.
             </p>
 
-            <ol class="director-list">
+            <ol>
               <li>
                 <strong>We must love God.</strong> The beginning of wisdom is
                 the fear of the Lord.
@@ -515,10 +163,10 @@
               </li>
               <li>
                 <strong>We must love our nation.</strong> Ghana is not only our
-                homeland—it is our God-given mission field.
+                homeland — it is our God-given mission field.
               </li>
               <li>
-                <strong>We must learn new knowledge and skills,</strong> and
+                <strong>We must learn new knowledge and skills.</strong> And
                 apply them to create businesses that solve real problems.
                 Learning without action is not enough.
               </li>
@@ -540,99 +188,182 @@
             <p>
               MIS is not just a school. It is a training ground for dreamers, a
               forge for leaders, and a launching pad for those chosen by God to
-              change the world.
+              change the world. Dear students, we do not fear the future. We are
+              being prepared. We are not alone. And with God on our side, we
+              will fulfill this great mission together.
             </p>
 
-            <p>
-              Dear students, we do not fear the future. We are being prepared.
-              We are not alone. And with God on our side, we will fulfill this
-              great mission together.
-            </p>
-
-            <p class="director-signoff">We are MIS. We are the future.</p>
-
-            <p class="director-closing">Thank you.</p>
+            <p>Thank you. We are MIS. We are the future.</p>
           </div>
         </div>
+
+        <aside class="principal-image-card">
+          <img
+            src="images/66fa4fa2c2d1e95d04538683_pexels-julia-m-cameron-4144929.avif"
+            alt="Principal portrait"
+          />
+        </aside>
       </div>
     </section>
 
-    <!-- Footer CTA Bar (Orange) -->
-    <div class="footer-cta-bar">
-      <div class="container text-center">
-        <h3>Discover Admissions</h3>
-      </div>
-    </div>
-
     <!-- Footer -->
     <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-section">
-            <h3 class="footer-title">Mission International School</h3>
-            <p class="footer-description">
-              Empowering students to become global citizens through innovative
-              education.
-            </p>
-            <div class="social-links">
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                class="social-link"
-                aria-label="Facebook"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
-                  />
-                </svg>
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                class="social-link"
-                aria-label="Instagram"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
-                  />
-                </svg>
-              </a>
+      <!-- Top Section -->
+      <div class="footer-top">
+        <div class="container">
+          <div class="footer-top-grid">
+            <div class="footer-col">
+              <h4 class="footer-heading">School Hours</h4>
+              <p class="footer-text">M-F: 8am - 3:30pm</p>
+            </div>
+            <div class="footer-col">
+              <h4 class="footer-heading">Address</h4>
+              <p class="footer-text">
+                Mission International School<br />
+                123 Education Road,<br />
+                Cantonments<br />
+                P.O.Box GP 1234<br />
+                Accra, Ghana
+              </p>
+            </div>
+            <div class="footer-col">
+              <h4 class="footer-heading">Email & Number</h4>
+              <p class="footer-text">
+                <a href="mailto:info@mis.edu.gh">info@mis.edu.gh</a><br />
+                +233 (0)30 123 4567<br />
+                +233 (0)30 765 4321
+              </p>
+            </div>
+            <div class="footer-col">
+              <h4 class="footer-heading">Newsletter</h4>
+              <form class="newsletter-form">
+                <input
+                  type="email"
+                  placeholder="Email"
+                  class="newsletter-input"
+                />
+                <button type="submit" class="newsletter-btn">Subscribe</button>
+              </form>
+              <div class="footer-social">
+                <a href="#" class="social-icon" aria-label="Facebook">
+                  <svg
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                    />
+                  </svg>
+                </a>
+                <a href="#" class="social-icon" aria-label="Twitter">
+                  <svg
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                    />
+                  </svg>
+                </a>
+                <a href="#" class="social-icon" aria-label="LinkedIn">
+                  <svg
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                    />
+                  </svg>
+                </a>
+                <a href="#" class="social-icon" aria-label="Instagram">
+                  <svg
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                    />
+                  </svg>
+                </a>
+                <a href="#" class="social-icon" aria-label="YouTube">
+                  <svg
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                    />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
-          <div class="footer-section">
-            <h4 class="footer-heading">Quick Links</h4>
-            <ul class="footer-links">
-              <li><a href="home.html">Home</a></li>
-              <li><a href="academics.html">Academics</a></li>
-              <li><a href="admissions.html">Admissions</a></li>
-              <li><a href="about.html">About</a></li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h4 class="footer-heading">Contact</h4>
-            <ul class="footer-links">
-              <li>info@missionschool.edu</li>
-              <li>+1 (555) 123-4567</li>
-              <li>123 Education St, City</li>
-            </ul>
+        </div>
+      </div>
+
+      <!-- Middle Section -->
+      <div class="footer-middle">
+        <div class="container">
+          <div class="footer-middle-grid">
+            <div class="footer-logo-col">
+              <img
+                src="images/MIS logo.png"
+                alt="MIS Logo"
+                class="footer-logo"
+              />
+              <div class="footer-brand">
+                <span class="footer-school-name"
+                  >Mission<br />International<br />School</span
+                >
+                <span class="footer-motto">"Arise and Shine"</span>
+              </div>
+            </div>
+            <div class="footer-col">
+              <h4 class="footer-heading">School</h4>
+              <ul class="footer-links">
+                <li><a href="admissions.html">Apply</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Child Protection Policy</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4 class="footer-heading">Portals</h4>
+              <ul class="footer-links">
+                <li><a href="#">Alumni</a></li>
+                <li><a href="#">Parent</a></li>
+                <li><a href="#">Staff</a></li>
+                <li><a href="#">Student</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4 class="footer-heading">Quick Links</h4>
+              <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="#">The MIS Experience</a></li>
+                <li><a href="#">MIS Boarding</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="footer-bottom">
-          <p>&copy; 2026 Mission International School. All rights reserved.</p>
+      </div>
+      <!-- Bottom Section -->
+      <div class="footer-bottom">
+        <div class="container">
+          <p>All rights reserved &copy; 2026 Mission International School</p>
         </div>
       </div>
     </footer>
