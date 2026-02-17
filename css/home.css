@@ -42,9 +42,14 @@ body {
   /* Slightly shrink */
 }
 
-/* Change text colors on scroll */
-.main-header.scrolled .nav-item {
+/* Change text colors on scroll - but not in mobile menu */
+.main-header.scrolled .nav-item:not(.main-nav.active .nav-item) {
   color: var(--color-primary-blue) !important;
+}
+
+/* Ensure mobile menu items stay white */
+.main-nav.active .nav-item {
+  color: #fff !important;
 }
 
 .main-header.scrolled .school-name,
