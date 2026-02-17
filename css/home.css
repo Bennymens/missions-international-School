@@ -1,3 +1,69 @@
+/* Remove any pseudo-elements (including empty/white squares) from dropdown links on desktop and mobile */
+.main-nav .has-dropdown > a::before,
+.main-nav .has-dropdown > a::after,
+.main-nav .has-dropdown-submenu > a::before,
+.main-nav .has-dropdown-submenu > a::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  border: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  box-shadow: none !important;
+}
+@media (max-width: 768px) {
+  /* Remove ▾ symbol from hamburger menu dropdowns */
+  .main-nav .has-dropdown > a .dropdown-caret {
+    display: none !important;
+  }
+
+  /* Remove any >, ▾, or other arrow/caret pseudo-elements in mobile hamburger menu */
+  .main-nav .has-dropdown > a .dropdown-caret,
+  .main-nav .has-dropdown-submenu > a .dropdown-caret,
+  .main-nav .has-dropdown > a .dropdown-arrow,
+  .main-nav .has-dropdown > a .dropdown-indicator,
+  .main-nav .has-dropdown > a .dropdown-icon,
+  .main-nav .has-dropdown-submenu > a .dropdown-caret,
+  .main-nav .has-dropdown-submenu > a .dropdown-arrow,
+  .main-nav .has-dropdown-submenu > a .dropdown-indicator,
+  .main-nav .has-dropdown-submenu > a .dropdown-icon {
+    display: none !important;
+  }
+
+  /* Remove >, ▸, or any arrow/caret from pseudo-elements on nav links (desktop and mobile) */
+  .main-nav .has-dropdown > a::after,
+  .main-nav .has-dropdown > a::before,
+  .main-nav .has-dropdown-submenu > a::after,
+  .main-nav .has-dropdown-submenu > a::before {
+    content: none !important;
+    display: none !important;
+  }
+
+  /* Reset pseudo-elements on links - we'll use a real button for toggle */
+  .main-nav .has-dropdown > a::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  /* Remove any before pseudo-element */
+  .main-nav .has-dropdown > a::before {
+    content: none !important;
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Remove dropdown arrows on mobile hamburger menu, keep only the + sign */
+  .main-nav .has-dropdown > a .dropdown-arrow {
+    display: none !important;
+  }
+}
+
+/* Remove default > arrow beside + for dropdowns in mobile hamburger */
+.main-nav .has-dropdown > a .dropdown-arrow {
+  display: none !important;
+}
+
 /* Global Variables (Blue & Yellow Theme) */
 :root {
   --color-primary-blue: #003366;
@@ -49,16 +115,20 @@ body {
   background: #ffffff !important;
   padding: 0.5rem 2rem;
 }
+
 .white-nav .nav-item {
   color: var(--color-primary-blue) !important;
 }
+
 .white-nav .school-name,
 .white-nav .school-motto {
   color: #333 !important;
 }
+
 .white-nav .brand-divider {
   background-color: #333 !important;
 }
+
 .white-nav .hamburger span {
   background-color: #333 !important;
 }
@@ -66,11 +136,6 @@ body {
 /* Change text colors on scroll - but not in mobile menu */
 .main-header.scrolled .nav-item:not(.main-nav.active .nav-item) {
   color: var(--color-primary-blue) !important;
-}
-
-/* Ensure mobile menu items stay white */
-.main-nav.active .nav-item {
-  color: #fff !important;
 }
 
 .main-header.scrolled .school-name,
@@ -598,55 +663,167 @@ body {
 }
 
 @media (max-width: 768px) {
-  .header-container {
-    flex-wrap: wrap;
-    position: relative;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
+  /* --- Custom hamburger dropdown style to match screenshot --- */
   .main-nav {
     position: fixed;
     top: 0;
-    right: -100%;
+    right: 0;
     width: 100%;
     height: 100vh;
     background-color: rgba(0, 51, 102, 0.98);
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-end;
     display: flex;
     z-index: 1000;
-    transition: right 0.4s ease-in-out;
-  }
-
-  .main-nav.active {
-    right: 0;
+    pointer-events: none;
   }
 
   .main-nav .nav-list {
     flex-direction: column;
-    gap: 20px;
-    text-align: center;
+    gap: 0;
+    text-align: left;
+    margin-top: 0;
+    width: 80vw;
+    max-width: 320px;
+    background: #fff;
+    border-radius: 0;
+    border-top: 4px solid var(--color-accent-yellow);
+    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.12);
+    padding: 0.7rem 0 0.7rem 0;
+    align-items: stretch;
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    right: auto;
+    transform: translate(-50%, 0) scale(0.98);
+    opacity: 0;
+    pointer-events: none;
+    transition:
+      opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+      transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1001;
+  }
+
+  .main-nav.active {
+    pointer-events: auto;
+  }
+
+  .main-nav.active .nav-list {
+    opacity: 1;
+    transform: translate(-50%, 60px) scale(1);
+    pointer-events: auto;
   }
 
   .main-nav .nav-item {
-    font-size: 1.2rem;
-    color: #fff !important;
+    font-size: 0.89rem;
+    color: #003366 !important;
+    padding: 0.8rem 1.1rem;
+    text-align: left;
+    border: none;
+    border-bottom: 1.5px solid #d1d1d1;
+    background: none;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    flex: 1 1 auto;
+    transition: none;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Removed pseudo-element + sign from links, now using .mobile-toggle button */
+  .main-nav .has-dropdown > a::after {
+    display: none !important;
+  }
+
+  /* Mobile Toggle Button Styles */
+  .mobile-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10;
+  }
+
+  .mobile-toggle::after {
+    content: "+";
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #003366;
+  }
+
+  /* When the parent LI is open, change + to × */
+  .has-dropdown.is-open > .mobile-toggle::after,
+  .has-dropdown-submenu.is-open > .mobile-toggle::after {
+    content: "×";
+    font-size: 1.8rem;
+    line-height: 1;
+  }
+
+  /* Dropdown menu hidden on mobile by default */
+  .main-nav .dropdown-menu,
+  .main-nav .dropdown-submenu {
+    display: none !important;
+  }
+
+  /* Show dropdown when parent LI is open */
+  .has-dropdown.is-open > .dropdown-menu,
+  .has-dropdown-submenu.is-open > .dropdown-submenu {
+    display: block !important;
+  }
+
+  /* Remove hover effect on navlinks in mobile hamburger */
+  .main-nav .nav-item:hover,
+  .main-nav.active .nav-item:hover {
+    color: #003366 !important;
+    background: none !important;
+    text-decoration: none !important;
+    filter: none !important;
+    /* Remove yellow hover on mobile */
   }
 
   .main-nav .dropdown-menu {
     position: static;
     background: transparent;
     box-shadow: none;
-    padding: 10px 0;
+    padding: 10px 0 10px 1.5rem;
   }
 
   .main-nav .dropdown-menu li a {
-    color: #fff;
+    color: #003366;
     background: transparent;
+    font-size: 0.85rem;
+    padding: 0.8rem 0;
+    border-bottom: 1.5px solid #d1d1d1;
+    font-weight: 400;
+    text-align: left;
+    display: block;
+    width: 100%;
+  }
+
+  /* Add borders to sub-dropdown items */
+  .main-nav .dropdown-submenu li a {
+    border-bottom: 1.5px solid #d1d1d1;
+    padding: 0.8rem 0 0.8rem 0.5rem;
+    display: block;
+    width: 100%;
+    font-size: 0.85rem;
+  }
+
+  /* Ensure lines even on last item of submenus */
+  .has-dropdown.is-open,
+  .has-dropdown-submenu.is-open {
+    padding-bottom: 0;
   }
 
   .join-grid {
@@ -811,12 +988,15 @@ body {
   min-width: 200px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   display: none;
-  overflow: visible; /* allow flyout submenu to escape */
+  overflow: visible;
+  /* allow flyout submenu to escape */
   border-top: 3px solid var(--color-accent-yellow);
 }
 
-.has-dropdown:hover .dropdown-menu {
-  display: block;
+@media (min-width: 769px) {
+  .has-dropdown:hover .dropdown-menu {
+    display: block;
+  }
 }
 
 /* Keep dropdown visible when parent has .open (used when flyout is active) */
@@ -853,11 +1033,14 @@ body {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
   display: none;
   border-left: 3px solid var(--color-accent-yellow);
-  z-index: 2000; /* sit above header */
+  z-index: 2000;
+  /* sit above header */
 }
 
-.has-dropdown-submenu:hover > .dropdown-submenu {
-  display: block;
+@media (min-width: 769px) {
+  .has-dropdown-submenu:hover > .dropdown-submenu {
+    display: block;
+  }
 }
 
 /* Mobile: show submenu inside the stacked mobile menu when main nav is active */
@@ -868,8 +1051,9 @@ body {
   display: none;
 }
 
+/* Mobile visibility handled by .is-open class now */
 .main-nav.active .has-dropdown-submenu > .dropdown-submenu {
-  display: block;
+  display: none;
 }
 
 /* Floating flyout that sits outside the About dropdown */
@@ -1816,17 +2000,19 @@ a {
     flex-direction: column;
   }
 
-  .hero-image-wrapper,
-  .hero-content-wrapper,
-  .split-content-side,
-  .split-image-side {
-    flex: auto;
+  .main-nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 64px;
     width: 100%;
-  }
-
-  .hero-image-wrapper {
-    height: 500px;
-    order: -1;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 1000;
+    background: none !important;
+    box-shadow: none !important;
+    transition: none;
   }
 
   /* Image on top */
@@ -1856,28 +2042,7 @@ a {
     position: relative;
   }
 
-  .hero-stats-row {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .stat-box {
-    border-left: none;
-    border-top: 2px solid #ddd;
-    padding-left: 0;
-    padding-top: 1rem;
-  }
-
-  /* Make split content image appear below text on mobile if desired, or keep natural order */
-  /* Currently: Content Left, Image Right -> Stacked: Content Top, Image Bottom */
-  .split-container {
-    flex-direction: column-reverse;
-  }
-
-  /* Image Top, Content Bottom */
-  .split-image-side {
-    height: 400px;
-  }
+  /* Removed empty .hero-stats-row ruleset */
 }
 
 /* Mobile News and Join Section Adjustments */

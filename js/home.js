@@ -277,4 +277,47 @@ document.addEventListener("DOMContentLoaded", () => {
     if (submenuAnchors[0]) setupFlyout(submenuAnchors[0], "staff-flyout");
     if (submenuAnchors[1]) setupFlyout(submenuAnchors[1], "student-flyout");
   }
+
+  /* ============================
+       MOBILE DROPDOWN INTERACTION
+       Injects + toggle buttons and handles clicks
+       ============================ */
+  function setupMobileDropdowns() {
+    const dropdownItems = document.querySelectorAll(
+      ".has-dropdown, .has-dropdown-submenu",
+    );
+
+    dropdownItems.forEach((item) => {
+      // Avoid duplicate injection
+      if (item.querySelector(".mobile-toggle")) return;
+
+      const toggle = document.createElement("button");
+      toggle.className = "mobile-toggle";
+      toggle.setAttribute("aria-label", "Toggle Dropdown");
+      toggle.setAttribute("type", "button");
+
+      // Insert the toggle after the main link
+      const link = item.querySelector(":scope > a");
+      if (link) {
+        link.after(toggle);
+      }
+
+      toggle.addEventListener("click", (e) => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          e.stopPropagation();
+          item.classList.toggle("is-open");
+        }
+      });
+    });
+  }
+
+  setupMobileDropdowns();
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 768) {
+      document.querySelectorAll(".is-open").forEach((el) => {
+        el.classList.remove("is-open");
+      });
+    }
+  });
 });
