@@ -3,7 +3,7 @@
 :root {
   --mis-dark-brown: #2c2416;
   --mis-cream: #fffcf8;
-  --mis-orange: #ffb347;
+  --mis-yellow: #ffd700;
   --mis-text-gray: #666;
 }
 
@@ -49,7 +49,7 @@
   font-family: "Playfair Display", serif;
   font-size: 5rem;
   line-height: 1.1;
-  color: var(--mis-dark-brown);
+  color: #4a90e2;
   margin-bottom: 2rem;
 }
 
@@ -88,8 +88,8 @@
 
 /* --- Values Section (Dark) --- */
 .values-section {
-  background-color: var(--mis-dark-brown);
-  color: var(--mis-cream);
+  background-color: #4a90e2;
+  color: #fff;
   padding: 8rem 0;
 }
 
@@ -98,6 +98,7 @@
   font-size: 3rem;
   text-align: center;
   margin-bottom: 6rem;
+  color: #ffd700;
   line-height: 1.2;
 }
 
@@ -153,7 +154,7 @@
 .core-value-item h4 {
   font-family: "Playfair Display", serif;
   font-size: 1.2rem;
-  color: var(--mis-orange);
+  color: var(--mis-yellow);
   margin-bottom: 0.5rem;
 }
 
@@ -218,13 +219,7 @@
   align-items: flex-start;
 }
 
-.leader-item:nth-child(4n + 1),
-.leader-item:nth-child(4n + 4) {
-  /* Correct checkerboard logic for 2 columns:
-       Row 1: Text(1) | Img(2)
-       Row 2: Img(3)  | Text(4) 
-    */
-}
+/* Removed empty ruleset for .leader-item:nth-child(4n + 1), .leader-item:nth-child(4n + 4) */
 
 /* Actually, I defined the order in HTML. Text | Img for row 1. Img | Text for row 2. 
    So styling is simple, just need to ensure background colors differ if needed.
@@ -305,7 +300,7 @@
   align-items: center;
   margin-bottom: 4rem;
   gap: 2rem;
-  border-bottom: 2px solid var(--mis-orange);
+  border-bottom: 2px solid var(--mis-yellow);
   padding-bottom: 2rem;
 }
 

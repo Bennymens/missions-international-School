@@ -68,4 +68,51 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  // News Slideshow Functionality
+  initNewsSlideshow();
 });
+
+// News Slideshow Variables and Functions
+let currentSlide = 0;
+const slides = document.querySelectorAll(".news-slide");
+const dots = document.querySelectorAll(".dot");
+
+function initNewsSlideshow() {
+  if (slides.length === 0) return;
+
+  // Auto-advance slides every 5 seconds
+  setInterval(() => {
+    changeSlide(1);
+  }, 5000);
+}
+
+function changeSlide(direction) {
+  if (slides.length === 0) return;
+
+  slides[currentSlide].classList.remove("active");
+  dots[currentSlide].classList.remove("active");
+
+  currentSlide += direction;
+
+  if (currentSlide >= slides.length) {
+    currentSlide = 0;
+  } else if (currentSlide < 0) {
+    currentSlide = slides.length - 1;
+  }
+
+  slides[currentSlide].classList.add("active");
+  dots[currentSlide].classList.add("active");
+}
+
+function goToSlide(index) {
+  if (slides.length === 0) return;
+
+  slides[currentSlide].classList.remove("active");
+  dots[currentSlide].classList.remove("active");
+
+  currentSlide = index;
+
+  slides[currentSlide].classList.add("active");
+  dots[currentSlide].classList.add("active");
+}

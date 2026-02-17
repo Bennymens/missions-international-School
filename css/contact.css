@@ -1,6 +1,6 @@
 /* ===== FOOTER ===== */
 footer.footer {
-  background: #7c4a03;
+  background: #4a90e2;
   color: #fff;
 }
 
@@ -157,20 +157,21 @@ footer.footer .footer-bottom {
 .section-label {
   display: inline-block;
   padding: 0.5rem 1.5rem;
-  background-color: rgba(255, 179, 71, 0.2);
-  color: #8b4513;
+  background-color: #ffd700;
+  color: #2c2416;
   text-transform: uppercase;
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 1px;
   margin-bottom: 1.5rem;
+  border-radius: 4px;
 }
 
 .contact-hero-title {
   font-family: "Playfair Display", serif;
   font-size: 4rem;
   line-height: 1.1;
-  color: #2c2416;
+  color: #4a90e2;
 }
 
 /* --- Compact Grid (Inside Hero) --- */
@@ -216,7 +217,7 @@ footer.footer .footer-bottom {
 
 .contact-card-compact .contact-icon {
   font-size: 1.4rem;
-  color: #ffb347;
+  color: #ffd700;
   margin-bottom: 0.5rem;
   /* Reduced from 0.8rem */
 }
@@ -265,8 +266,8 @@ footer.footer .footer-bottom {
 
 /* --- Contact Form Section --- */
 .contact-form-section {
-  background-color: #ffb347;
-  /* The specific orange color */
+  background-color: #ffd700;
+  /* Bright yellow color */
   padding: 6rem 0;
   display: flex;
   justify-content: center;
@@ -300,7 +301,7 @@ footer.footer .footer-bottom {
 .form-title {
   font-family: "Playfair Display", serif;
   font-size: 2.5rem;
-  color: #2c2416;
+  color: #4a90e2;
 }
 
 .main-contact-form {
@@ -356,11 +357,11 @@ footer.footer .footer-bottom {
 }
 
 .submit-btn {
-  background-color: #ffb347;
+  background-color: #ffd700;
   /* Match section bg? Or Darker? Screenshot looks like it matches or is slightly different. Let's use darker for contrast or same orange if button is separate. Detailed screenshot shows "Send a Message" button looks beige/orange? Actually looks like same orange section bg. Let's use the Background Orange but maybe a bit darker/lighter or stick to consistent button style */
   /* Screenshot 3 shows the button is actually OUTSIDE the white card but still inside orange section? NO, it's inside the card but full width at the bottom. */
   /* Wait, looking at "Send a Message" in screenshot 3... The button background matches the SECTION background color (orange). */
-  background-color: #ffb347;
+  background-color: #ffd700;
   color: #2c2416;
   border: none;
   padding: 1.2rem;
