@@ -197,7 +197,46 @@ document.addEventListener("DOMContentLoaded", () => {
     const parentTopLi = parentUl ? parentUl.closest(".has-dropdown") : null;
 
     function show() {
-      if (window.innerWidth < 768) return; // disable on mobile
+      // On mobile, show as modal overlay
+      if (window.innerWidth < 768) {
+        // Hide all other flyouts
+        document.querySelectorAll(".flyout, .schools-flyout").forEach((f) => {
+          if (f !== flyout) {
+            f.style.display = "none";
+            f.setAttribute("aria-hidden", "true");
+          }
+        });
+        flyout.style.position = "fixed";
+        flyout.style.left = "0";
+        flyout.style.top = "0";
+        flyout.style.width = "100vw";
+        flyout.style.height = "100vh";
+        flyout.style.background = "rgba(255,255,255,0.98)";
+        flyout.style.zIndex = "5000";
+        flyout.style.display = "flex";
+        flyout.style.flexDirection = "column";
+        flyout.style.justifyContent = "center";
+        flyout.style.alignItems = "center";
+        flyout.setAttribute("aria-hidden", "false");
+        // Add a close button if not present
+        if (!flyout.querySelector(".flyout-close")) {
+          const closeBtn = document.createElement("button");
+          closeBtn.className = "flyout-close";
+          closeBtn.textContent = "×";
+          closeBtn.style.position = "absolute";
+          closeBtn.style.top = "24px";
+          closeBtn.style.right = "24px";
+          closeBtn.style.fontSize = "2.5rem";
+          closeBtn.style.background = "none";
+          closeBtn.style.border = "none";
+          closeBtn.style.color = "#003366";
+          closeBtn.style.cursor = "pointer";
+          closeBtn.setAttribute("aria-label", "Close");
+          closeBtn.addEventListener("click", () => hide());
+          flyout.appendChild(closeBtn);
+        }
+        return;
+      }
       // hide any other visible flyouts first
       document.querySelectorAll(".flyout, .schools-flyout").forEach((f) => {
         if (f !== flyout) {
@@ -228,14 +267,25 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     anchor.addEventListener("mouseenter", () => {
-      clearTimeout(flyoutTimeout);
-      show();
+      if (window.innerWidth >= 768) {
+        clearTimeout(flyoutTimeout);
+        show();
+      }
     });
     anchor.addEventListener("mouseleave", () => {
-      clearTimeout(flyoutTimeout);
-      flyoutTimeout = setTimeout(() => {
-        if (!flyout.matches(":hover")) hide();
-      }, 150);
+      if (window.innerWidth >= 768) {
+        clearTimeout(flyoutTimeout);
+        flyoutTimeout = setTimeout(() => {
+          if (!flyout.matches(":hover")) hide();
+        }, 150);
+      }
+    });
+    // Mobile: tap/click opens flyout
+    anchor.addEventListener("click", (e) => {
+      if (window.innerWidth < 768) {
+        e.preventDefault();
+        show();
+      }
     });
 
     flyout.addEventListener("mouseenter", () => clearTimeout(flyoutTimeout));
@@ -288,8 +338,9 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     dropdownItems.forEach((item) => {
-      // Avoid duplicate injection
-      if (item.querySelector(".mobile-toggle")) return;
+      // Remove any duplicate toggles
+      const existingToggle = item.querySelector(".mobile-toggle");
+      if (existingToggle) existingToggle.remove();
 
       const toggle = document.createElement("button");
       toggle.className = "mobile-toggle";
