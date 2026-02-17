@@ -606,6 +606,7 @@ body {
 
   .main-nav .nav-item {
     font-size: 1.2rem;
+    color: #fff !important;
   }
 
   .main-nav .dropdown-menu {
