@@ -1,8 +1,8 @@
 /* Remove any pseudo-elements (including empty/white squares) from dropdown links on desktop and mobile */
-.main-nav .has-dropdown > a::before,
-.main-nav .has-dropdown > a::after,
-.main-nav .has-dropdown-submenu > a::before,
-.main-nav .has-dropdown-submenu > a::after {
+.main-nav .has-dropdown>a::before,
+.main-nav .has-dropdown>a::after,
+.main-nav .has-dropdown-submenu>a::before,
+.main-nav .has-dropdown-submenu>a::after {
   content: none !important;
   display: none !important;
   background: none !important;
@@ -11,56 +11,59 @@
   height: 0 !important;
   box-shadow: none !important;
 }
+
 @media (max-width: 768px) {
+
   /* Remove ▾ symbol from hamburger menu dropdowns */
-  .main-nav .has-dropdown > a .dropdown-caret {
+  .main-nav .has-dropdown>a .dropdown-caret {
     display: none !important;
   }
 
   /* Remove any >, ▾, or other arrow/caret pseudo-elements in mobile hamburger menu */
-  .main-nav .has-dropdown > a .dropdown-caret,
-  .main-nav .has-dropdown-submenu > a .dropdown-caret,
-  .main-nav .has-dropdown > a .dropdown-arrow,
-  .main-nav .has-dropdown > a .dropdown-indicator,
-  .main-nav .has-dropdown > a .dropdown-icon,
-  .main-nav .has-dropdown-submenu > a .dropdown-caret,
-  .main-nav .has-dropdown-submenu > a .dropdown-arrow,
-  .main-nav .has-dropdown-submenu > a .dropdown-indicator,
-  .main-nav .has-dropdown-submenu > a .dropdown-icon {
+  .main-nav .has-dropdown>a .dropdown-caret,
+  .main-nav .has-dropdown-submenu>a .dropdown-caret,
+  .main-nav .has-dropdown>a .dropdown-arrow,
+  .main-nav .has-dropdown>a .dropdown-indicator,
+  .main-nav .has-dropdown>a .dropdown-icon,
+  .main-nav .has-dropdown-submenu>a .dropdown-caret,
+  .main-nav .has-dropdown-submenu>a .dropdown-arrow,
+  .main-nav .has-dropdown-submenu>a .dropdown-indicator,
+  .main-nav .has-dropdown-submenu>a .dropdown-icon {
     display: none !important;
   }
 
   /* Remove >, ▸, or any arrow/caret from pseudo-elements on nav links (desktop and mobile) */
-  .main-nav .has-dropdown > a::after,
-  .main-nav .has-dropdown > a::before,
-  .main-nav .has-dropdown-submenu > a::after,
-  .main-nav .has-dropdown-submenu > a::before {
+  .main-nav .has-dropdown>a::after,
+  .main-nav .has-dropdown>a::before,
+  .main-nav .has-dropdown-submenu>a::after,
+  .main-nav .has-dropdown-submenu>a::before {
     content: none !important;
     display: none !important;
   }
 
   /* Reset pseudo-elements on links - we'll use a real button for toggle */
-  .main-nav .has-dropdown > a::after {
+  .main-nav .has-dropdown>a::after {
     content: none !important;
     display: none !important;
   }
 
   /* Remove any before pseudo-element */
-  .main-nav .has-dropdown > a::before {
+  .main-nav .has-dropdown>a::before {
     content: none !important;
     display: none !important;
   }
 }
 
 @media (max-width: 768px) {
+
   /* Remove dropdown arrows on mobile hamburger menu, keep only the + sign */
-  .main-nav .has-dropdown > a .dropdown-arrow {
+  .main-nav .has-dropdown>a .dropdown-arrow {
     display: none !important;
   }
 }
 
 /* Remove default > arrow beside + for dropdowns in mobile hamburger */
-.main-nav .has-dropdown > a .dropdown-arrow {
+.main-nav .has-dropdown>a .dropdown-arrow {
   display: none !important;
 }
 
@@ -94,11 +97,9 @@ body {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.6) 0%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0) 100%);
   /* Transparent/Gradient initially */
   padding: 1rem 2rem;
   transition: all 0.3s ease;
@@ -528,11 +529,9 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.85) 0%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.85) 0%,
+      rgba(0, 0, 0, 0) 100%);
   padding: 1.5rem;
   color: #fff;
 }
@@ -663,6 +662,7 @@ body {
 }
 
 @media (max-width: 768px) {
+
   /* --- Custom hamburger dropdown style to match screenshot --- */
   .main-nav {
     position: fixed;
@@ -735,7 +735,7 @@ body {
   }
 
   /* Removed pseudo-element + sign from links, now using .mobile-toggle button */
-  .main-nav .has-dropdown > a::after {
+  .main-nav .has-dropdown>a::after {
     display: none !important;
   }
 
@@ -763,8 +763,8 @@ body {
   }
 
   /* When the parent LI is open, change + to × */
-  .has-dropdown.is-open > .mobile-toggle::after,
-  .has-dropdown-submenu.is-open > .mobile-toggle::after {
+  .has-dropdown.is-open>.mobile-toggle::after,
+  .has-dropdown-submenu.is-open>.mobile-toggle::after {
     content: "×";
     font-size: 1.8rem;
     line-height: 1;
@@ -777,8 +777,8 @@ body {
   }
 
   /* Show dropdown when parent LI is open */
-  .has-dropdown.is-open > .dropdown-menu,
-  .has-dropdown-submenu.is-open > .dropdown-submenu {
+  .has-dropdown.is-open>.dropdown-menu,
+  .has-dropdown-submenu.is-open>.dropdown-submenu {
     display: block !important;
   }
 
@@ -1001,7 +1001,7 @@ body {
 
 /* Keep dropdown visible when parent has .open (used when flyout is active) */
 .has-dropdown.open .dropdown-menu {
-  display: block;
+  display: block !important;
 }
 
 .dropdown-menu li a {
@@ -1038,8 +1038,8 @@ body {
 }
 
 @media (min-width: 769px) {
-  .has-dropdown-submenu:hover > .dropdown-submenu {
-    display: block;
+  .has-dropdown-submenu:hover>.dropdown-submenu {
+    display: none;
   }
 }
 
@@ -1052,7 +1052,7 @@ body {
 }
 
 /* Mobile visibility handled by .is-open class now */
-.main-nav.active .has-dropdown-submenu > .dropdown-submenu {
+.main-nav.active .has-dropdown-submenu>.dropdown-submenu {
   display: none;
 }
 
@@ -1095,6 +1095,7 @@ body {
 
 /* Disable floating flyout on small screens (use stacked submenu instead) */
 @media (max-width: 767px) {
+
   .flyout,
   .schools-flyout {
     display: none !important;
@@ -1497,6 +1498,7 @@ body {
 }
 
 @media (max-width: 768px) {
+
   .footer-top-grid,
   .footer-middle-grid {
     grid-template-columns: 1fr;
@@ -1640,11 +1642,9 @@ a {
   right: 0;
   z-index: 1000;
   padding: 1rem 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.98),
-    rgba(240, 248, 255, 0.98)
-  );
+  background: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0.98),
+      rgba(240, 248, 255, 0.98));
   backdrop-filter: blur(10px);
   border-bottom: 2px solid #ffd700;
   transition: all 0.3s ease;

@@ -251,7 +251,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       const rect = anchor.getBoundingClientRect();
-      const left = rect.right + window.scrollX + 8;
+      const left = rect.right + window.scrollX;
       const top = rect.top + window.scrollY;
       flyout.style.left = `${left}px`;
       flyout.style.top = `${top}px`;
@@ -277,7 +277,7 @@ document.addEventListener("DOMContentLoaded", () => {
         clearTimeout(flyoutTimeout);
         flyoutTimeout = setTimeout(() => {
           if (!flyout.matches(":hover")) hide();
-        }, 150);
+        }, 300);
       }
     });
     // Mobile: tap/click opens flyout
@@ -290,7 +290,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     flyout.addEventListener("mouseenter", () => clearTimeout(flyoutTimeout));
     flyout.addEventListener("mouseleave", () => {
-      flyoutTimeout = setTimeout(hide, 150);
+      flyoutTimeout = setTimeout(() => {
+        if (!anchor.matches(":hover")) hide();
+      }, 300);
     });
 
     // Close when clicking outside
@@ -397,6 +399,21 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     });
+  }
+
+  // Scroll Reveal for Leadership Cards
+  const profileCards = document.querySelectorAll(".profile-card");
+  if (profileCards.length > 0) {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("reveal");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    profileCards.forEach((card) => revealObserver.observe(card));
   }
 
   window.addEventListener("resize", () => {
