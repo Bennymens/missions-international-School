@@ -1,0 +1,343 @@
+/* ===== CAREERS PAGE STYLES ===== */
+
+:root {
+    --careers-blue: #003366;
+    --careers-green: #2d5a27;
+    /* GIS-style green */
+    --careers-gray-bg: #f4f4f4;
+    --careers-text-main: #555;
+    --careers-text-dark: #333;
+}
+
+/* Careers Hero */
+.careers-hero {
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    /* Bring it down a bit */
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/students.png');
+    /* Placeholder, can be swapped */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.careers-hero-content h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 3rem;
+    /* Reduced from 4.5rem */
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Intro Section */
+.careers-intro {
+    padding: 80px 20px 60px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.careers-page-title {
+    font-family: "Poppins", sans-serif;
+    font-size: 2.2rem;
+    /* Reduced from 2.8rem */
+    font-weight: 800;
+    color: var(--careers-text-dark);
+    margin-bottom: 20px;
+}
+
+.title-underline-yellow {
+    width: 60px;
+    height: 3px;
+    background-color: #facd12;
+    /* MIS Yellow */
+    margin: 0 auto 40px;
+}
+
+.careers-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--careers-text-main);
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+/* Visiting Educator Section */
+.program-section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.program-section h3 {
+    color: var(--careers-blue);
+    font-family: "Poppins", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.program-image-container {
+    width: 100%;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.program-image {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.download-link {
+    display: inline-block;
+    margin-top: 30px;
+    color: var(--careers-blue);
+    text-decoration: none;
+    font-weight: 700;
+    border-bottom: 2px solid var(--careers-blue);
+    font-size: 1.1rem;
+}
+
+/* Testimonials Section */
+.testimonials-banner {
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/campus.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin: 80px 0;
+}
+
+.play-button {
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-bottom: 25px;
+    transition: transform 0.3s ease;
+}
+
+.play-button::after {
+    content: "";
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 25px solid var(--careers-text-dark);
+    margin-left: 5px;
+}
+
+.play-button:hover {
+    transform: scale(1.1);
+}
+
+.testimonials-banner h2 {
+    font-family: var(--font-serif, "Playfair Display", serif);
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+/* Requirements Box */
+.requirements-container {
+    max-width: 1100px;
+    margin: 0 auto 100px;
+    padding: 0 20px;
+}
+
+.requirements-box {
+    background-color: var(--careers-gray-bg);
+    padding: 60px 80px;
+}
+
+.requirements-box h2 {
+    text-align: center;
+    font-family: var(--font-serif, "Playfair Display", serif);
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    color: var(--careers-text-dark);
+}
+
+.req-group {
+    margin-bottom: 40px;
+}
+
+.req-group h4 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--careers-text-dark);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.req-list {
+    list-style: none;
+    padding: 0;
+}
+
+.req-list li {
+    font-size: 1rem;
+    color: var(--careers-text-main);
+    padding: 8px 0 8px 25px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.req-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--careers-text-dark);
+    font-weight: bold;
+}
+
+/* Vacancy Accordion */
+.vacancy-accordion {
+    max-width: 1100px;
+    margin: 0 auto 100px;
+    padding: 0 20px;
+}
+
+.accordion-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.accordion-header {
+    background-color: var(--careers-blue);
+    color: #fff;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: "Poppins", sans-serif;
+}
+
+.accordion-header:hover {
+    background-color: #002244;
+    /* Darker blue */
+}
+
+.accordion-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: none;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    /* Explicitly white */
+}
+
+.accordion-icon {
+    font-size: 1.2rem;
+    color: #fff;
+    /* Explicitly white */
+    transition: transform 0.3s ease;
+}
+
+.accordion-item.active .accordion-icon {
+    transform: rotate(45deg);
+    /* Optional icon rotation */
+}
+
+.accordion-content {
+    background-color: #fff;
+    /* White background */
+    color: var(--careers-text-main);
+    /* Dark gray text */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease;
+    padding: 0 30px;
+    border-left: 1px solid var(--careers-blue);
+    border-right: 1px solid var(--careers-blue);
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 1000px;
+    /* Large enough to fit content */
+    padding: 30px;
+    border-bottom: 1px solid var(--careers-blue);
+}
+
+.vacancy-title-main {
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--careers-text-dark);
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .careers-hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .requirements-box {
+        padding: 40px 30px;
+    }
+
+    .careers-page-title {
+        font-size: 1.8rem;
+    }
+
+    .program-section h3,
+    .vacancy-title-main,
+    .requirements-box h2 {
+        font-size: 1.3rem;
+    }
+
+    .accordion-header h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .careers-hero {
+        height: 40vh;
+    }
+
+    .careers-hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .careers-page-title {
+        font-size: 1.6rem;
+    }
+
+    .testimonials-banner {
+        height: 40vh;
+    }
+
+    .testimonials-banner h2 {
+        font-size: 1.35rem;
+        text-align: center;
+        padding: 0 20px;
+    }
+}
