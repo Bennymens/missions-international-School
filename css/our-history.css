@@ -1,0 +1,187 @@
+/* ===== OUR HISTORY PAGE SPECIFIC STYLES ===== */
+
+:root {
+    --mis-blue: hsl(210, 100%, 50%);
+    --mis-yellow: hsl(45, 100%, 55%);
+    --mis-blue-dark: hsl(210, 100%, 40%);
+    --mis-yellow-dark: hsl(45, 100%, 45%);
+    --mis-green: #4CAF50;
+}
+
+.history-content {
+    margin-top: 0;
+}
+
+/* Hero Section */
+.history-hero {
+    width: 100%;
+    height: 60vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/campus.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Brief History Header */
+.brief-history-header {
+    text-align: center;
+    padding: 80px 20px 40px;
+    background-color: white;
+}
+
+.history-main-title {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    font-weight: 800;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.title-underline {
+    width: 60px;
+    height: 4px;
+    background-color: var(--mis-yellow);
+    margin: 0 auto;
+}
+
+/* History Narrative Section */
+.history-narrative {
+    padding-bottom: 80px;
+}
+
+.history-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.history-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #666;
+    text-align: justify;
+}
+
+.history-text b,
+.history-text strong {
+    color: #333;
+    font-weight: 800;
+}
+
+/* Timeline Section (Moving below narrative) */
+.timeline-section {
+    max-width: 1000px;
+    margin: 0 auto 100px;
+    padding: 60px 20px 0;
+    border-top: 1px solid #eee;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 968px) {
+    .history-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 0 20px;
+        /* Space on left and right */
+    }
+
+    .history-text {
+        font-size: 1rem;
+        /* Reduced font size on mobile */
+        text-align: justify;
+        /* Block alignment */
+    }
+}
+
+.timeline-header {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+/* The vertical line */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #eee;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+/* The dot */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -34px;
+    top: 8px;
+    width: 10px;
+    height: 10px;
+    background-color: var(--mis-blue-dark);
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 0 0 1px #eee;
+    z-index: 1;
+}
+
+.timeline-date {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    color: var(--mis-blue-dark);
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.timeline-event {
+    font-size: 1.2rem;
+    color: #555;
+    font-weight: 600;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.timeline-subevent {
+    font-size: 1rem;
+    color: #777;
+    font-weight: 400;
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .history-hero {
+        height: 40vh;
+    }
+
+    .history-main-title {
+        font-size: 2.2rem;
+    }
+
+    .timeline-event {
+        font-size: 1.1rem;
+    }
+}
