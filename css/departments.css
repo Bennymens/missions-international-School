@@ -1,0 +1,206 @@
+/* ===== DEPARTMENTS PAGE STYLES ===== */
+
+:root {
+    --dept-blue: #003366;
+    /* MIS Blue */
+    --dept-bg-light: #f9f9f9;
+    --dept-border: #e6e6e6;
+    --dept-text-gray: #666;
+    --dept-text-dark: #333;
+}
+
+/* Departments Hero */
+.departments-hero {
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 10%;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/students.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.departments-hero-title {
+    font-family: var(--font-serif);
+    font-size: 4.5rem;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Page Title Section */
+.departments-intro {
+    padding: 60px 20px 40px;
+    text-align: center;
+}
+
+.departments-title {
+    font-family: var(--font-serif);
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--dept-text-dark);
+    margin-bottom: 20px;
+}
+
+.title-underline-dept {
+    width: 60px;
+    height: 3px;
+    background-color: var(--dept-blue);
+    margin: 0 auto;
+}
+
+/* Tab Container */
+.tabs-container {
+    max-width: 1200px;
+    margin: 0 auto 100px;
+    padding: 0 20px;
+}
+
+.tab-header-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #f5f5f5;
+    border: 1px solid var(--dept-border);
+    flex-wrap: wrap;
+}
+
+.tab-header-item {
+    padding: 12px 25px;
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--dept-text-gray);
+    transition: all 0.3s ease;
+    border-right: 1px solid var(--dept-border);
+    font-size: 0.95rem;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.tab-header-item:last-child {
+    border-right: none;
+}
+
+.tab-header-item:hover {
+    background-color: #eee;
+}
+
+.tab-header-item.active {
+    background-color: var(--dept-blue);
+    color: #fff;
+}
+
+/* Tab Content */
+.tab-content {
+    border: 1px solid var(--dept-border);
+    border-top: none;
+    padding: 35px 50px;
+    background-color: #fff;
+    min-height: 300px;
+}
+
+.tab-panel {
+    display: none;
+    animation: fadeIn 0.6s ease forwards;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.panel-title {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--dept-text-dark);
+    margin-bottom: 30px;
+}
+
+.panel-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--dept-text-gray);
+    margin-bottom: 15px;
+}
+
+.dept-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dept-list li {
+    font-size: 0.95rem;
+    color: var(--dept-text-gray);
+    padding: 6px 0;
+    position: relative;
+    padding-left: 20px;
+}
+
+.dept-list li::before {
+    content: "•";
+    color: var(--dept-blue);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.sub-section-title {
+    font-weight: 800;
+    color: var(--dept-text-dark);
+    margin: 20px 0 10px;
+    font-size: 1.15rem;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .tab-header-item {
+        padding: 15px 20px;
+        font-size: 1rem;
+    }
+
+    .tab-content {
+        padding: 30px;
+    }
+
+    .departments-hero-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .tab-header-list {
+        flex-direction: column;
+    }
+
+    .tab-header-item {
+        border-right: none;
+        border-bottom: 1px solid var(--dept-border);
+        text-align: left;
+    }
+
+    .departments-hero {
+        height: 50vh;
+        padding: 0 5%;
+    }
+}

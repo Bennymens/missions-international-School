@@ -230,6 +230,10 @@ body {
   transition: color 0.3s;
 }
 
+.dropdown-caret {
+  margin-left: 4px;
+}
+
 /* ============================
    EVENTS & WELCOME SPLIT
    ============================ */

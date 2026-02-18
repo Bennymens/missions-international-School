@@ -401,6 +401,40 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  /* ============================
+       DEPARTMENTS: TAB SWITCHING
+       ============================ */
+  const deptTabs = document.querySelectorAll(".tab-header-item");
+  const deptPanels = document.querySelectorAll(".tab-panel");
+
+  if (deptTabs.length > 0 && deptPanels.length > 0) {
+    deptTabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const targetId = tab.getAttribute("data-tab");
+
+        // Update Tab Headers
+        deptTabs.forEach((t) => t.classList.remove("active"));
+        tab.classList.add("active");
+
+        // Update Panels
+        deptPanels.forEach((panel) => {
+          panel.classList.remove("active");
+          if (panel.id === targetId) {
+            panel.classList.add("active");
+          }
+        });
+
+        // Scroll to tab top on mobile/tablet for better visibility
+        if (window.innerWidth <= 968) {
+          const tabContainer = document.querySelector(".tabs-container");
+          if (tabContainer) {
+            tabContainer.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        }
+      });
+    });
+  }
+
   // Scroll Reveal for Leadership Cards
   const profileCards = document.querySelectorAll(".profile-card");
   if (profileCards.length > 0) {

@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Departments - MIS</title>
   <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/departments.css" />
 </head>
 
 <body class="white-nav">
@@ -88,10 +89,240 @@
     </div>
   </header>
 
-  <main class="container">
-    <h1>Departments</h1>
-    <p>Academic and support departments at MIS.</p>
+  <main>
+    <!-- Departments Hero -->
+    <section class="departments-hero">
+      <h1 class="departments-hero-title">Departments</h1>
+    </section>
+
+    <!-- Page Title & Underline -->
+    <section class="departments-intro">
+      <h2 class="departments-title">Departments</h2>
+      <div class="title-underline-dept"></div>
+    </section>
+
+    <!-- Interactive Tabs -->
+    <section class="tabs-container">
+      <ul class="tab-header-list">
+        <li class="tab-header-item active" data-tab="admin">Administration</li>
+        <li class="tab-header-item" data-tab="subjects">Subject Departments</li>
+        <li class="tab-header-item" data-tab="library">The Library</li>
+        <li class="tab-header-item" data-tab="counselling">Counselling</li>
+      </ul>
+
+      <div class="tab-content">
+        <!-- Administration Panel -->
+        <div class="tab-panel active" id="admin">
+          <ul class="dept-list">
+            <li>Principal's Office</li>
+            <li>Sectional Vice Principal's Offices</li>
+            <li>Office of Vice Principal, Administration</li>
+            <li>Marketing and Communications</li>
+            <li>Human Resources & Administration</li>
+            <li>Office of Admissions</li>
+            <li>Security and Safety Assurance</li>
+            <li>Finance</li>
+            <li>Procurement</li>
+            <li>Facilities</li>
+            <li>Technology Platform and Standards</li>
+            <li>IT Systems</li>
+            <li>Guidance & Counseling</li>
+            <li>Health and Wellness</li>
+          </ul>
+        </div>
+
+        <!-- Subject Departments Panel -->
+        <div class="tab-panel" id="subjects">
+          <div class="sub-section">
+            <h4 class="sub-section-title">Infants School</h4>
+            <ul class="dept-list">
+              <li>Art</li>
+              <li>ICT</li>
+              <li>Music</li>
+              <li>Physical Education and Sports</li>
+            </ul>
+          </div>
+
+          <div class="sub-section">
+            <h4 class="sub-section-title">Junior School</h4>
+            <ul class="dept-list">
+              <li>Art</li>
+              <li>ESL</li>
+              <li>ICT</li>
+              <li>Library</li>
+              <li>Music</li>
+              <li>Physical Education and Sports</li>
+              <li>Science</li>
+            </ul>
+          </div>
+
+          <div class="sub-section">
+            <h4 class="sub-section-title">Secondary School</h4>
+            <ul class="dept-list">
+              <li>Art</li>
+              <li>Biology</li>
+              <li>Economics and Business Studies</li>
+              <li>Chemistry</li>
+              <li>Physics</li>
+              <li>English Language (English as a Second Language)</li>
+              <li>English Literature</li>
+              <li>ICT</li>
+              <li>Library</li>
+              <li>Mathematics</li>
+              <li>Modern Languages (French and Spanish)</li>
+              <li>Social Studies (History and Geography)</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Library Panel -->
+        <div class="tab-panel" id="library">
+          <p class="panel-text">
+            Currently the library has over 18,000 resources. The collection is made up of fiction, non-fiction,
+            reference books, magazines, scholarly journals, resourceful websites and videos which support the
+            curriculum. Recently, the library completed subscription to the "Britannica On Line" Database and has also
+            signed on to "JSTOR."
+          </p>
+          <p class="panel-text">
+            We continue to provide our students with resources to develop their knowledge and understanding of the world
+            in which we live.
+          </p>
+        </div>
+
+        <!-- Counselling Panel -->
+        <div class="tab-panel" id="counselling">
+          <p class="panel-text">
+            The Guidance and Counseling Department offers confidential advice to students and their families across the
+            school from reception to the sixth form. The Department gives career guidance and assists with applications
+            to universities and colleges both internationally and nationally.
+          </p>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="footer">
+    <!-- Top Section -->
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-top-grid">
+          <div class="footer-col">
+            <h4 class="footer-heading">School Hours</h4>
+            <p class="footer-text">M-F: 8am - 3:30pm</p>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-heading">Address</h4>
+            <p class="footer-text">
+              Mission International School<br />
+              123 Education Road,<br />
+              Cantonments<br />
+              P.O.Box GP 1234<br />
+              Accra, Ghana
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-heading">Email & Number</h4>
+            <p class="footer-text">
+              <a href="mailto:info@mis.edu.gh">info@mis.edu.gh</a><br />
+              +233 (0)30 123 4567<br />
+              +233 (0)30 765 4321
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-heading">Newsletter</h4>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Email" class="newsletter-input" />
+              <button type="submit" class="newsletter-btn">Subscribe</button>
+            </form>
+            <div class="footer-social">
+              <!-- Social icons here - simplified for brevity -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Middle Section -->
+    <div class="footer-middle">
+      <div class="container">
+        <div class="footer-middle-grid">
+          <div class="footer-logo-col">
+            <img src="images/MIS logo.png" alt="MIS Logo" class="footer-logo" />
+            <div class="footer-brand">
+              <span class="footer-school-name">Mission<br />International<br />School</span>
+              <span class="footer-motto">"Arise and Shine"</span>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-heading">School</h4>
+            <ul class="footer-links">
+              <li><a href="admissions.html">Apply</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Child Protection Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-heading">Portals</h4>
+            <ul class="footer-links">
+              <li><a href="#">Alumni</a></li>
+              <li><a href="#">Parent</a></li>
+              <li><a href="#">Staff</a></li>
+              <li><a href="#">Student</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-heading">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="admissions.html">Admissions</a></li>
+              <li><a href="#">The MIS Experience</a></li>
+              <li><a href="#">MIS Boarding</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bottom Section -->
+    <div class="footer-bottom">
+      <div class="container">
+        <p>All rights reserved &copy; 2026 Mission International School</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Flyouts -->
+  <div id="schools-flyout" class="schools-flyout" aria-hidden="true">
+    <ul>
+      <li><a href="infant.html">Infant</a></li>
+      <li><a href="junior.html">Junior</a></li>
+      <li><a href="lower-secondary.html">Lower Secondary</a></li>
+      <li><a href="upper-secondary.html">Upper Secondary</a></li>
+    </ul>
+  </div>
+  <div id="staff-flyout" class="schools-flyout" aria-hidden="true">
+    <ul>
+      <li><a href="staff-professional-development.html">Professional Development</a></li>
+      <li><a href="staff-teaching-learning.html">Teaching & Learning</a></li>
+      <li><a href="staff-wellbeing.html">Wellbeing</a></li>
+    </ul>
+  </div>
+  <div id="student-flyout" class="schools-flyout" aria-hidden="true">
+    <ul>
+      <li><a href="student-life.html">Student Life</a></li>
+      <li><a href="activities.html">Activities</a></li>
+      <li><a href="physical-education.html">Physical Education & Sports</a></li>
+      <li><a href="facilities.html">Facilities</a></li>
+      <li><a href="calendar.html">Calendar</a></li>
+      <li><a href="news-and-events.html">News & Updates</a></li>
+      <li><a href="health-and-wellness.html">Health & Wellness</a></li>
+      <li><a href="security-at-mis.html">Security at MIS</a></li>
+      <li><a href="school-song.html">School Song</a></li>
+      <li><a href="guidance-and-counselling.html">Guidance & Counselling</a></li>
+    </ul>
+  </div>
+
   <script src="js/home.js"></script>
 </body>
 
