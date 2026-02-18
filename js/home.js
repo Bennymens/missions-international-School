@@ -364,6 +364,41 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   setupMobileDropdowns();
+
+  /* ============================
+       ABOUT MIS: INTERACTIVE OBJECTIVES
+       ============================ */
+  const objTabs = document.querySelectorAll(".obj-tab-item");
+  const objPanels = document.querySelectorAll(".obj-panel");
+
+  if (objTabs.length > 0 && objPanels.length > 0) {
+    objTabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const targetId = tab.getAttribute("data-target");
+        const container = document.querySelector(".objectives-interactive-container");
+
+        // Update Tabs
+        objTabs.forEach((t) => t.classList.remove("active"));
+        tab.classList.add("active");
+
+        // Update Panels
+        objPanels.forEach((panel) => {
+          panel.classList.remove("active");
+          if (panel.id === targetId) {
+            panel.classList.add("active");
+          }
+        });
+
+        // Smooth scroll to top on mobile
+        if (window.innerWidth <= 968 && container) {
+          setTimeout(() => {
+            container.scrollIntoView({ behavior: "smooth", block: "start" });
+          }, 100);
+        }
+      });
+    });
+  }
+
   window.addEventListener("resize", () => {
     if (window.innerWidth > 768) {
       document.querySelectorAll(".is-open").forEach((el) => {
