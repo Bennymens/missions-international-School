@@ -1,480 +1,323 @@
-/* CSS for Admissions Page */
+/* Admissions Page GIS Redesign Styles */
 
-/* Reuse styles from home.css where applicable, but define specific admissions styles here */
+:root {
+  --color-green-gis: #003366;
+  /* Use primary blue on Admissions page to match site branding */
+  --color-light-green: #e9f5ef;
+  --color-text-dark: #333;
+  --color-text-gray: #666;
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
+  --container-max-width: 1200px;
+}
 
-/* --- Hero Section --- */
-.hero-admission {
-  height: 60vh;
-  min-height: 400px;
-  background:
-    linear-gradient(rgba(74, 144, 226, 0.7), rgba(74, 144, 226, 0.7)),
-    url("../images/campus.png");
-  background-size: cover;
-  background-position: center;
+/* --- Top Bar --- */
+.top-bar {
+  background-color: var(--color-green-gis);
+  padding: 8px 0;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.top-bar-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  padding: 0 20px;
+}
+
+.top-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.top-links a:hover {
+  text-decoration: underline;
+}
+
+/* --- Header Polish --- */
+.main-header {
+  background: white !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  text-align: center;
-  color: white;
-  margin-top: 70px;
-  /* Offset for fixed navbar */
 }
 
-.hero-overlay-center h1 {
-  font-family: "Playfair Display", serif;
-  font-size: 4rem;
-  color: white;
-  margin-bottom: 1rem;
+.brand-logo {
+  height: 50px;
 }
 
-.hero-overlay-center p {
-  font-family: "Inter", sans-serif;
-  font-size: 1.2rem;
-  color: rgba(255, 255, 255, 0.9);
+.school-name {
+  color: var(--color-green-gis) !important;
+  font-size: 14px !important;
 }
 
-/* --- Split Sections (Review & Decision) --- */
-.admissions-split {
+.school-motto {
+  color: var(--color-green-gis) !important;
+  font-style: italic;
+  font-size: 11px !important;
+}
+
+.nav-list {
   display: flex;
-  /* align-items: stretch; property is default, so removing center achieves this */
+  list-style: none;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-item {
+  color: var(--color-text-dark) !important;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.nav-item.active {
+  color: var(--color-green-gis) !important;
+  font-weight: 700;
+}
+
+.search-icon svg {
+  color: var(--color-text-gray);
+}
+
+/* --- Hero --- */
+.admissions-hero {
+  height: 600px;
   width: 100%;
-  min-height: 300px;
-  margin: 0;
-  /* Ensure no margins */
-}
-
-.admissions-content-side {
-  width: 50%;
-  padding: 2rem 4rem;
-  background-color: #fffcf8;
-  /* Creamy white background from design */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.admissions-content-wrapper {
-  max-width: 500px;
-}
-
-.admissions-number {
-  font-size: 5rem;
-  font-weight: 700;
-  color: #4a90e2;
-  /* Blue */
-  margin-bottom: 1rem;
-  font-family: "Playfair Display", serif;
-}
-
-.admissions-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #ffd700;
-  /* Yellow */
-  margin-bottom: 1.5rem;
-  font-family: "Playfair Display", serif;
-}
-
-.admissions-description {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #555;
-  font-family: "Inter", sans-serif;
-}
-
-.admissions-image-side {
-  width: 50%;
-  position: relative;
-  /* For object-fit to work reliably with absolute if needed, but height 100% works with flex stretch */
-  /* Removed fixed height to allow it to match content side if content is taller */
   overflow: hidden;
-  background-color: #ddd;
 }
 
-.admissions-image {
+.hero-image-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.hero-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* --- Requirements Grid --- */
-.enrollment-requirements {
-  padding: 4rem 0;
-  text-align: center;
-  background-color: #fff;
-}
-
-.requirements-header {
-  margin-bottom: 3rem;
-}
-
-.requirements-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  width: 100%;
-  margin: 0 auto;
-}
-
-.req-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  min-height: 250px;
-  border-right: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-  background-color: #fffcf8;
-  /* Default light bg */
-}
-
-/* Header Cards colors */
-.bg-orange {
-  background-color: #ffd700;
-  color: #5c4033;
-}
-
-.bg-yellow {
-  background-color: #ffe066;
-  color: #5c4033;
-}
-
-.bg-red {
-  background-color: #ff8566;
-  color: #5c4033;
-}
-
-.req-header-card h3 {
-  font-family: "Playfair Display", serif;
-  font-size: 1.8rem;
-  font-weight: 600;
-}
-
-.req-value {
-  font-family: "Playfair Display", serif;
-  font-size: 3rem;
-  color: #5c4033;
-  margin-bottom: 0.5rem;
-}
-
-.req-label {
-  font-family: "Inter", sans-serif;
-  font-size: 0.9rem;
-  color: #666;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* Helper to make High School title span 2 rows vertically */
-.req-span-2-rows {
-  grid-row: span 2;
-  height: 100%;
-  /* Important for spanning */
-}
-
-/* --- Scholarships Section (Same styling as Requirements) --- */
-.scholarships-requirements {
-  padding: 4rem 0;
-  text-align: center;
-  background-color: #fffcf8;
-}
-
-.scholarships-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  width: 100%;
-  margin: 0 auto;
-}
-
-/* Scholarship Introduction Text */
-.scholarships-intro-text {
-  font-size: 1rem;
-  color: #555555;
-  line-height: 1.6;
-  margin-top: 1rem;
-  text-align: center;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  font-family: "Inter", sans-serif;
-}
-
-/* Scholarship Card Hover */
-.scholarship-card {
-  cursor: pointer;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.scholarship-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-  border: 3px solid #ffd700;
-}
-
-/* Modal Styles */
-.scholarship-modal {
-  display: none;
-  position: fixed;
+.hero-overlay {
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 1000;
-  align-items: center;
-  justify-content: center;
+  background: rgba(0, 0, 0, 0.1);
 }
 
-.scholarship-modal.active {
-  display: flex;
-}
-
-.modal-content {
+/* --- Main Content --- */
+.admissions-main {
   background-color: white;
-  border-radius: 12px;
-  padding: 40px;
-  max-width: 500px;
-  width: 90%;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  position: relative;
-  animation: slideUp 0.3s ease;
+  padding-bottom: 50px;
 }
 
-@keyframes slideUp {
-  from {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.modal-close {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  background: none;
-  border: none;
-  font-size: 28px;
-  cursor: pointer;
-  color: #222222;
-  transition: color 0.2s ease;
-}
-
-.modal-close:hover {
-  color: #ffd700;
-}
-
-.modal-content h3 {
-  font-size: 1.5rem;
-  color: #5dade2;
-  margin-bottom: 20px;
-  font-family: "Playfair Display", serif;
-}
-
-.modal-content h4 {
-  font-size: 1rem;
-  color: #222222;
-  margin-top: 20px;
-  margin-bottom: 15px;
-  font-weight: 600;
-  font-family: "Inter", sans-serif;
-}
-
-.modal-content ul {
-  list-style: none;
-  padding: 0;
-}
-
-.modal-content li {
-  padding: 10px 0;
-  padding-left: 25px;
-  position: relative;
-  color: #555555;
-  line-height: 1.6;
-  font-family: "Inter", sans-serif;
-}
-
-.modal-content li:before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: #ffd700;
-  font-weight: bold;
-}
-
-.modal-apply-btn {
-  width: 100%;
-  background: linear-gradient(135deg, #ffd700 0%, #ffc107 100%);
-  color: white;
-  border: none;
-  padding: 1rem 2rem;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
-  font-family: "Inter", sans-serif;
-  cursor: pointer;
-  margin-top: 1.5rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(255, 179, 71, 0.3);
-}
-
-.modal-apply-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 179, 71, 0.4);
-}
-
-/* --- FAQ Section --- */
-.faq-section {
-  padding: 5rem 0;
-  background-color: #5c4033;
-  /* Dark brown background from screenshot */
-  color: #fffcf8;
-}
-
-.faq-section .section-label,
-.faq-section .section-title-large,
-.faq-section p {
-  color: #fffcf8;
-  /* Override text color for dark bg */
-}
-
-.faq-section .section-label {
-  background-color: #fffcf8;
-  color: #5c4033;
-  padding: 0.25rem 0.75rem;
-  display: inline-block;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.faq-container {
-  max-width: 800px;
+.content-container {
+  max-width: 900px;
   margin: 0 auto;
-  padding-top: 3rem;
+  padding: 40px 20px;
 }
 
-.faq-item {
-  border-bottom: 1px solid rgba(255, 252, 248, 0.2);
-  margin-bottom: 0.5rem;
+.page-title-section {
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-.faq-question {
+.page-title {
+  font-family: var(--font-heading);
+  font-size: 36px;
+  color: var(--color-text-dark);
+  margin-bottom: 15px;
+}
+
+.title-underline {
+  width: 40px;
+  height: 3px;
+  background-color: var(--color-green-gis);
+  margin: 0 auto;
+}
+
+.intro-section p {
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+.intro-thanks {
+  font-weight: 500;
+}
+
+.resource-links a {
+  color: var(--color-green-gis);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.resource-links a:hover {
+  text-decoration: underline;
+}
+
+/* --- Process Section --- */
+.process-section {
+  margin-top: 50px;
+}
+
+.process-box {
+  background-color: #fcfcfc;
+  border: 1px solid #efefef;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.section-title {
+  background-color: transparent;
+  padding: 20px;
+  color: var(--color-green-gis);
+  font-size: 18px;
+  font-weight: 700;
+  border-bottom: 1px solid #efefef;
+}
+
+.process-content {
+  padding: 30px;
+}
+
+.stage-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.stage-subtitle {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.process-list {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.process-list li {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.note-italic {
+  font-style: italic;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.note {
+  border-left: 4px solid var(--color-green-gis);
+  padding-left: 15px;
+  margin: 20px 0;
+  color: #555;
+  font-size: 15px;
+}
+
+.enquiry-cta {
+  margin-top: 40px;
+  font-weight: 600;
+}
+
+.enquiry-cta a {
+  color: var(--color-green-gis);
+  text-decoration: underline;
+}
+
+/* --- Accordions --- */
+.accordion-section {
+  margin-top: 40px;
+}
+
+.accordion-item {
+  margin-bottom: 10px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.accordion-header {
   width: 100%;
-  text-align: left;
-  background: none;
-  border: none;
-  padding: 1.5rem 1rem;
-  font-size: 1.2rem;
-  font-family: "Playfair Display", serif;
-  color: #fffcf8;
-  /* Cream */
-  cursor: pointer;
+  background-color: var(--color-green-gis);
+  color: white;
+  padding: 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  text-align: left;
+}
+
+.accordion-content {
+  background-color: #f9f9f9;
+  max-height: 0;
+  overflow: hidden;
   transition: all 0.3s ease;
 }
 
-.faq-question:hover {
-  background-color: rgba(255, 255, 255, 0.05);
+.accordion-item.active .accordion-content {
+  max-height: 500px;
+  padding: 20px;
 }
 
-.faq-icon {
-  font-size: 1.5rem;
-  transition: transform 0.3s ease;
+/* --- Floating Elements --- */
+.floating-chat {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
 }
 
-.faq-item.active .faq-icon {
-  transform: rotate(45deg);
+.chat-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #007bff;
+  /* Accessibility/Chat blue */
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
-.faq-item.active .faq-question {
-  font-weight: 600;
-}
-
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition:
-    max-height 0.3s ease,
-    padding 0.3s ease;
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-.faq-item.active .faq-answer {
-  max-height: 200px;
-  /* Approximate max height */
-  padding: 1rem 1.5rem 1.5rem;
-}
-
-.faq-answer p {
-  font-family: "Inter", sans-serif;
-  font-size: 1rem;
-  line-height: 1.6;
-  margin: 0;
-  opacity: 0.9;
-}
-
-/* --- Contact CTA --- */
-.contact-cta {
-  background-color: #ffcc99;
-  /* Light Orange/Beige from screenshot bottom */
-  padding: 3rem 0;
-  text-align: center;
-}
-
-.contact-cta-title {
-  font-family: "Playfair Display", serif;
-  font-size: 2rem;
-  color: #5c4033;
-}
-
-/* --- Responsive Design --- */
-@media (max-width: 900px) {
-  .admissions-split {
-    flex-direction: column;
-    height: auto;
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .nav-list {
+    display: none;
   }
 
-  .admissions-content-side,
-  .admissions-image-side {
-    width: 100%;
-    height: auto;
+  .content-container {
+    padding: 20px;
   }
 
-  .admissions-image-side {
-    min-height: 300px;
-  }
-
-  .requirements-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .req-span-2-rows {
-    grid-row: auto;
-  }
-
-  .hero-overlay-center h1 {
-    font-size: 2.5rem;
-  }
-
-  .modal-content {
-    padding: 30px 20px;
-  }
-
-  .modal-content h3 {
-    font-size: 1.3rem;
-  }
-
-  .scholarships-intro-text {
-    font-size: 0.95rem;
+  .page-title {
+    font-size: 28px;
   }
 }

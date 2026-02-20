@@ -1,8 +1,8 @@
 /* Remove any pseudo-elements (including empty/white squares) from dropdown links on desktop and mobile */
-.main-nav .has-dropdown>a::before,
-.main-nav .has-dropdown>a::after,
-.main-nav .has-dropdown-submenu>a::before,
-.main-nav .has-dropdown-submenu>a::after {
+.main-nav .has-dropdown > a::before,
+.main-nav .has-dropdown > a::after,
+.main-nav .has-dropdown-submenu > a::before,
+.main-nav .has-dropdown-submenu > a::after {
   content: none !important;
   display: none !important;
   background: none !important;
@@ -13,57 +13,55 @@
 }
 
 @media (max-width: 768px) {
-
   /* Remove ▾ symbol from hamburger menu dropdowns */
-  .main-nav .has-dropdown>a .dropdown-caret {
+  .main-nav .has-dropdown > a .dropdown-caret {
     display: none !important;
   }
 
   /* Remove any >, ▾, or other arrow/caret pseudo-elements in mobile hamburger menu */
-  .main-nav .has-dropdown>a .dropdown-caret,
-  .main-nav .has-dropdown-submenu>a .dropdown-caret,
-  .main-nav .has-dropdown>a .dropdown-arrow,
-  .main-nav .has-dropdown>a .dropdown-indicator,
-  .main-nav .has-dropdown>a .dropdown-icon,
-  .main-nav .has-dropdown-submenu>a .dropdown-caret,
-  .main-nav .has-dropdown-submenu>a .dropdown-arrow,
-  .main-nav .has-dropdown-submenu>a .dropdown-indicator,
-  .main-nav .has-dropdown-submenu>a .dropdown-icon {
+  .main-nav .has-dropdown > a .dropdown-caret,
+  .main-nav .has-dropdown-submenu > a .dropdown-caret,
+  .main-nav .has-dropdown > a .dropdown-arrow,
+  .main-nav .has-dropdown > a .dropdown-indicator,
+  .main-nav .has-dropdown > a .dropdown-icon,
+  .main-nav .has-dropdown-submenu > a .dropdown-caret,
+  .main-nav .has-dropdown-submenu > a .dropdown-arrow,
+  .main-nav .has-dropdown-submenu > a .dropdown-indicator,
+  .main-nav .has-dropdown-submenu > a .dropdown-icon {
     display: none !important;
   }
 
   /* Remove >, ▸, or any arrow/caret from pseudo-elements on nav links (desktop and mobile) */
-  .main-nav .has-dropdown>a::after,
-  .main-nav .has-dropdown>a::before,
-  .main-nav .has-dropdown-submenu>a::after,
-  .main-nav .has-dropdown-submenu>a::before {
+  .main-nav .has-dropdown > a::after,
+  .main-nav .has-dropdown > a::before,
+  .main-nav .has-dropdown-submenu > a::after,
+  .main-nav .has-dropdown-submenu > a::before {
     content: none !important;
     display: none !important;
   }
 
   /* Reset pseudo-elements on links - we'll use a real button for toggle */
-  .main-nav .has-dropdown>a::after {
+  .main-nav .has-dropdown > a::after {
     content: none !important;
     display: none !important;
   }
 
   /* Remove any before pseudo-element */
-  .main-nav .has-dropdown>a::before {
+  .main-nav .has-dropdown > a::before {
     content: none !important;
     display: none !important;
   }
 }
 
 @media (max-width: 768px) {
-
   /* Remove dropdown arrows on mobile hamburger menu, keep only the + sign */
-  .main-nav .has-dropdown>a .dropdown-arrow {
+  .main-nav .has-dropdown > a .dropdown-arrow {
     display: none !important;
   }
 }
 
 /* Remove default > arrow beside + for dropdowns in mobile hamburger */
-.main-nav .has-dropdown>a .dropdown-arrow {
+.main-nav .has-dropdown > a .dropdown-arrow {
   display: none !important;
 }
 
@@ -90,6 +88,36 @@ body {
 /* ============================
    HEADER & NAVBAR
    ============================ */
+
+/* --- Top Bar --- */
+.top-bar {
+  background-color: var(--color-green-gis);
+  padding: 8px 0;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  position: relative;
+  z-index: 1001;
+}
+
+.top-bar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 20px;
+}
+
+.top-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.top-links a:hover {
+  text-decoration: underline;
+}
+
 .main-header {
   position: fixed;
   /* Fixed on scroll */
@@ -97,9 +125,11 @@ body {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: linear-gradient(to bottom,
-      rgba(0, 0, 0, 0.6) 0%,
-      rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
   /* Transparent/Gradient initially */
   padding: 1rem 2rem;
   transition: all 0.3s ease;
@@ -108,40 +138,74 @@ body {
 .main-header.scrolled {
   background: #ffffff;
   padding: 0.5rem 2rem;
-  /* Slightly shrink */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 /* Force white navbar on pages that opt-in (non-home pages) */
+.white-nav .top-bar {
+  display: block;
+}
+
 .white-nav .main-header {
   background: #ffffff !important;
   padding: 0.5rem 2rem;
+  position: fixed !important;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .white-nav .nav-item {
+  color: var(--color-text-dark) !important;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.white-nav .nav-item.active {
   color: var(--color-primary-blue) !important;
+  font-weight: 700;
 }
 
 .white-nav .school-name,
 .white-nav .school-motto {
-  color: #333 !important;
+  color: #222222 !important;
+}
+
+.white-nav .school-name {
+  font-size: 14px !important;
+}
+
+.white-nav .school-motto {
+  font-size: 11px !important;
+  font-style: italic;
 }
 
 .white-nav .brand-divider {
-  background-color: #333 !important;
+  background-color: #eee !important;
 }
 
 .white-nav .hamburger span {
   background-color: #333 !important;
 }
 
-/* Change text colors on scroll - but not in mobile menu */
-.main-header.scrolled .nav-item:not(.main-nav.active .nav-item) {
+.white-nav .search-icon svg {
+  color: #666;
+}
+
+/* Change text colors on scroll - make scrolled header match non-home pages */
+.main-header.scrolled .nav-item {
+  color: #222222 !important;
+}
+
+.main-header.scrolled .nav-item.active {
   color: var(--color-primary-blue) !important;
+  font-weight: 700;
 }
 
 .main-header.scrolled .school-name,
 .main-header.scrolled .school-motto {
-  color: #333;
+  color: #222222;
 }
 
 .main-header.scrolled .brand-divider {
@@ -158,6 +222,51 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+/* Mobile: push logo and school name to the far left edge */
+@media (max-width: 768px) {
+  .header-container {
+    padding-left: 0 !important;
+    padding-right: 0.75rem !important;
+  }
+
+  .logo-area,
+  .logo-link {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .logo-link {
+    gap: 4px !important;
+    padding-left: 0 !important;
+  }
+
+  .brand-text {
+    margin-left: 0 !important;
+    align-items: flex-start;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .logo-wrapper {
+    align-items: flex-start;
+  }
+
+  .brand-logo {
+    margin-left: 0;
+    height: 48px;
+  }
+
+  /* keep hamburger on the right */
+  .hamburger {
+    margin-left: auto;
+  }
 }
 
 .logo-area a {
@@ -206,7 +315,6 @@ body {
   font-style: normal;
   margin-top: 4px;
   opacity: 0.9;
-  color: #fff;
 }
 
 /* Navigation */
@@ -228,6 +336,12 @@ body {
   font-size: 0.85rem;
   /* GIS style is smaller text */
   transition: color 0.3s;
+}
+
+/* Hide search icon in navbar across all pages */
+.search-item,
+.search-icon {
+  display: none !important;
 }
 
 .dropdown-caret {
@@ -533,9 +647,11 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: linear-gradient(to top,
-      rgba(0, 0, 0, 0.85) 0%,
-      rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
   padding: 1.5rem;
   color: #fff;
 }
@@ -666,7 +782,6 @@ body {
 }
 
 @media (max-width: 768px) {
-
   /* --- Custom hamburger dropdown style to match screenshot --- */
   .main-nav {
     position: fixed;
@@ -739,7 +854,7 @@ body {
   }
 
   /* Removed pseudo-element + sign from links, now using .mobile-toggle button */
-  .main-nav .has-dropdown>a::after {
+  .main-nav .has-dropdown > a::after {
     display: none !important;
   }
 
@@ -767,8 +882,8 @@ body {
   }
 
   /* When the parent LI is open, change + to × */
-  .has-dropdown.is-open>.mobile-toggle::after,
-  .has-dropdown-submenu.is-open>.mobile-toggle::after {
+  .has-dropdown.is-open > .mobile-toggle::after,
+  .has-dropdown-submenu.is-open > .mobile-toggle::after {
     content: "×";
     font-size: 1.8rem;
     line-height: 1;
@@ -781,8 +896,8 @@ body {
   }
 
   /* Show dropdown when parent LI is open */
-  .has-dropdown.is-open>.dropdown-menu,
-  .has-dropdown-submenu.is-open>.dropdown-submenu {
+  .has-dropdown.is-open > .dropdown-menu,
+  .has-dropdown-submenu.is-open > .dropdown-submenu {
     display: block !important;
   }
 
@@ -1042,7 +1157,7 @@ body {
 }
 
 @media (min-width: 769px) {
-  .has-dropdown-submenu:hover>.dropdown-submenu {
+  .has-dropdown-submenu:hover > .dropdown-submenu {
     display: none;
   }
 }
@@ -1056,7 +1171,7 @@ body {
 }
 
 /* Mobile visibility handled by .is-open class now */
-.main-nav.active .has-dropdown-submenu>.dropdown-submenu {
+.main-nav.active .has-dropdown-submenu > .dropdown-submenu {
   display: none;
 }
 
@@ -1099,7 +1214,6 @@ body {
 
 /* Disable floating flyout on small screens (use stacked submenu instead) */
 @media (max-width: 767px) {
-
   .flyout,
   .schools-flyout {
     display: none !important;
@@ -1502,7 +1616,6 @@ body {
 }
 
 @media (max-width: 768px) {
-
   .footer-top-grid,
   .footer-middle-grid {
     grid-template-columns: 1fr;
@@ -1646,9 +1759,11 @@ a {
   right: 0;
   z-index: 1000;
   padding: 1rem 0;
-  background: linear-gradient(to bottom,
-      rgba(255, 255, 255, 0.98),
-      rgba(240, 248, 255, 0.98));
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.98),
+    rgba(240, 248, 255, 0.98)
+  );
   backdrop-filter: blur(10px);
   border-bottom: 2px solid #ffd700;
   transition: all 0.3s ease;
