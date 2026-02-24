@@ -1,310 +1,137 @@
-/* ===== FOOTER ===== */
-footer.footer {
-  background: #4a90e2;
-  color: #fff;
+/* ===== CONTACT PAGE GIS STYLE ===== */
+
+.contact-page-main {
+  font-family: "Inter", sans-serif;
+  background-color: #ffffff;
 }
 
-.footer .footer-title,
-.footer .footer-description,
-.footer .footer-links a,
-.footer .logo-text,
-.footer-bottom p {
-  color: #fff !important;
-}
-
-footer.footer .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px 0 20px;
-}
-
-footer.footer .footer-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 40px;
-  padding-bottom: 20px;
-}
-
-footer.footer .footer-section {
-  flex: 1 1 220px;
-  min-width: 180px;
-  margin-bottom: 20px;
-}
-
-footer.footer .logo {
+/* --- Hero Section --- */
+.contact-hero-gis {
+  position: relative;
+  width: 100%;
+  height: 55vh;
+  min-height: 400px;
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-
-footer.footer .footer-title {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-footer.footer .footer-description {
-  font-size: 0.95rem;
-  margin-bottom: 10px;
-}
-
-footer.footer .footer-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-footer.footer .footer-links li {
-  margin-bottom: 8px;
-}
-
-footer.footer .footer-links a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 0.97rem;
-  transition: text-decoration 0.2s;
-}
-
-footer.footer .footer-links a:hover {
-  text-decoration: underline;
-}
-
-footer.footer .social-links {
-  display: flex;
-  gap: 12px;
-  margin-top: 8px;
-}
-
-footer.footer .social-link {
-  color: #fff;
-  font-size: 1rem;
-  text-decoration: none;
-  transition: text-decoration 0.2s;
-}
-
-footer.footer .social-link:hover {
-  text-decoration: underline;
-}
-
-footer.footer .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  text-align: center;
-  padding: 18px 0 0 0;
-  font-size: 0.95rem;
-  margin-top: 10px;
-}
-
-.footer-logo-wrapper {
-  margin-bottom: 10px;
-  text-align: center;
-}
-.footer-logo-img {
-  height: 80px;
-  width: auto;
-  display: inline-block;
-}
-/* CSS for Contact Page */
-
-/* Reuse variables and basic styles from home.css */
-
-/* --- Contact Hero Split --- */
-.contact-hero-split {
-  display: flex;
-  width: 100%;
-  min-height: 100vh;
-  /* Full viewport height */
+  justify-content: center;
   overflow: hidden;
+  margin-top: 60px;
+  /* Offset for header */
 }
 
-.contact-image-side {
-  width: 40%;
-  position: relative;
-  background-color: #ddd;
+.hero-bg-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.contact-hero-img {
+.hero-bg-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
+  object-position: center;
 }
 
-.contact-content-side {
-  width: 60%;
-  padding: 8rem 0 0 0;
-  /* Top, Right=0, Bottom=0, Left=0 */
-  background-color: #fffcf8;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding-left: 0;
+.hero-overlay-dark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
 }
 
-.nav-spacer {
-  height: 60px;
-  /* Adjust if needed */
+.contact-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  padding: 0 20px;
 }
 
-.hero-text-wrapper {
-  margin-bottom: 4rem;
-  padding-left: 4rem;
-  /* Move text to the right */
-}
-
-.section-label {
-  display: inline-block;
-  padding: 0.5rem 1.5rem;
-  background-color: #ffd700;
-  color: #2c2416;
+.contact-hero-subtitle {
+  font-size: 1.1rem;
+  letter-spacing: 4px;
+  font-weight: 700;
   text-transform: uppercase;
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin-bottom: 1.5rem;
-  border-radius: 4px;
+  margin-bottom: 1rem;
+  display: block;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 .contact-hero-title {
   font-family: "Playfair Display", serif;
-  font-size: 4rem;
+  font-size: 5rem;
+  font-weight: 700;
   line-height: 1.1;
-  color: #4a90e2;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
-/* --- Compact Grid (Inside Hero) --- */
-.contact-grid-compact {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0;
-  /* No space between cards */
-  border-top: 1px solid #ccc;
-  /* Unify border color */
-  border-left: 1px solid #ccc;
-  /* Left border for grid */
-  padding-top: 0;
-  /* Remove padding inside grid */
-  width: 100%;
-  margin-top: 0;
-  /* Spacing handled by justify-content: space-between */
-}
-
-.contact-card-compact {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  background-color: transparent;
-  /* Or white if needed, design seems minimalist */
-  border: none;
-  /* Reset full border */
-  border-right: 1px solid #ccc;
-  /* Right border */
-  border-bottom: 1px solid #ccc;
-  /* Bottom border */
-  padding: 0;
-  /* Padding handled inside to allow button to be full width */
-  height: 100%;
-  /* Ensure uniform height if grid allows */
-}
-
-.contact-card-content {
-  padding: 1.5rem 1.5rem 1rem 1.5rem;
-  /* Reduced padding top/bottom */
-  flex-grow: 1;
-}
-
-.contact-card-compact .contact-icon {
-  font-size: 1.4rem;
-  color: #ffd700;
-  margin-bottom: 0.5rem;
-  /* Reduced from 0.8rem */
-}
-
-.contact-card-compact h3 {
-  font-family: "Playfair Display", serif;
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-bottom: 0.2rem;
-  /* Reduced from 0.4rem */
-  color: #2c2416;
-  line-height: 1.2;
-}
-
-.contact-card-compact p {
-  font-family: "Inter", sans-serif;
-  font-size: 0.9rem;
-  /* Slightly smaller font */
-  color: #666;
-  margin-bottom: 0.5rem;
-  /* Reduced from 1rem */
-  line-height: 1.4;
-}
-
-.contact-link-text {
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  color: #5c4033;
-  text-decoration: none;
-  background-color: #f5f0e6;
-  /* Button background */
-  display: block;
-  width: 100%;
-  text-align: center;
-  padding: 0.8rem;
-  /* Reduced from 1rem */
-  border-top: 1px solid #eee;
-  transition: all 0.3s ease;
-  /* No border-radius */
-}
-
-.contact-link-text:hover {
-  background-color: #ebe4d6;
-  color: #2c2416;
-}
-
-/* --- Contact Form Section --- */
-.contact-form-section {
-  background-color: #ffd700;
-  /* Bright yellow color */
-  padding: 6rem 0;
-  display: flex;
-  justify-content: center;
-}
-
-.form-card {
-  background-color: #fffcf8;
-  padding: 4rem;
-  max-width: 1200px;
-  /* Increased from 1000px */
+/* --- Main Layout --- */
+.custom-contact-container {
+  max-width: 1100px;
   margin: 0 auto;
+  padding: 4rem 20px;
+}
+
+/* --- Blue Form Section (was Yellow) --- */
+.contact-blue-section {
+  background-color: #ffffff;
+}
+
+.contact-flex-row {
+  display: flex;
+  background-color: var(--mis-blue, #003366);
+  /* Blue background */
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form-side {
+  flex: 1;
+  padding: 4rem;
+  color: #111;
+}
+
+.contact-map-side {
+  width: 450px;
+  padding: 4rem 4rem 4rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.map-wrapper {
   width: 100%;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  min-height: 350px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.form-header {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.form-label {
-  display: inline-block;
-  font-size: 0.8rem;
+.section-label-small {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 2.5px;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #8b4513;
   margin-bottom: 1rem;
-  font-weight: 600;
 }
 
-.form-title {
+.section-title-large {
   font-family: "Playfair Display", serif;
-  font-size: 2.5rem;
-  color: #4a90e2;
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 2.5rem;
+  color: #ffffff;
+  /* Contrast on blue */
 }
 
-.main-contact-form {
+/* Form Styles */
+.gis-style-form {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -312,88 +139,221 @@ footer.footer .footer-bottom {
 
 .form-row {
   display: flex;
-  gap: 2rem;
-}
-
-.full-width {
-  width: 100%;
+  gap: 1.5rem;
 }
 
 .two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
 }
 
 .input-group {
   display: flex;
   flex-direction: column;
-  width: 100%;
-}
-
-.input-group label {
-  font-family: "Playfair Display", serif;
-  font-weight: 600;
-  color: #5c4033;
-  margin-bottom: 0.5rem;
-  font-size: 1rem;
 }
 
 .input-group input,
 .input-group textarea {
-  background-color: #f9f7f2;
-  /* Very light beige/gray */
-  border: none;
-  padding: 1rem;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 6px;
+  padding: 1.2rem;
   font-family: "Inter", sans-serif;
-  color: #5c4033;
+  color: #111;
   font-size: 1rem;
-  transition: background 0.3s ease;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+  color: #333;
+  font-weight: 600;
 }
 
 .input-group input:focus,
 .input-group textarea:focus {
   outline: none;
-  background-color: #f0ede6;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-color: #fff;
 }
 
-.submit-btn {
-  background-color: #ffd700;
-  /* Match section bg? Or Darker? Screenshot looks like it matches or is slightly different. Let's use darker for contrast or same orange if button is separate. Detailed screenshot shows "Send a Message" button looks beige/orange? Actually looks like same orange section bg. Let's use the Background Orange but maybe a bit darker/lighter or stick to consistent button style */
-  /* Screenshot 3 shows the button is actually OUTSIDE the white card but still inside orange section? NO, it's inside the card but full width at the bottom. */
-  /* Wait, looking at "Send a Message" in screenshot 3... The button background matches the SECTION background color (orange). */
-  background-color: #ffd700;
-  color: #2c2416;
-  border: none;
-  padding: 1.2rem;
-  font-family: "Playfair Display", serif;
-  font-size: 1.2rem;
-  font-weight: 600;
-  cursor: pointer;
+.form-submit-container {
+  display: flex;
+  justify-content: flex-end;
   margin-top: 1rem;
-  transition: filter 0.3s ease;
 }
 
-.submit-btn:hover {
-  filter: brightness(0.95);
+.submit-btn-text {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: all 0.3s ease;
 }
 
-/* --- Responsive --- */
-@media (max-width: 768px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+.submit-btn-text .arrow {
+  background-color: #fff;
+  color: #ffd700;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* --- Accordions Section --- */
+.contact-accordions-section {
+  padding-bottom: 5rem;
+  background-color: #fff;
+}
+
+.accordions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.accordion-main-header {
+  width: 100%;
+  padding: 1.3rem;
+  background-color: #ffd700;
+  color: #111;
+  border: none;
+  border-radius: 6px;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 1.15rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.accordion-main-header .icon {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+/* FAQ Block */
+.faq-block {
+  padding: 1rem 0;
+}
+
+.faq-label-small {
+  color: #111;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  font-size: 0.95rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.faq-huge-title {
+  font-family: "Playfair Display", serif;
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #111;
+  line-height: 1.1;
+  margin-bottom: 2.5rem;
+}
+
+.btn-outline-blue {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border: 2px solid #003366;
+  color: #003366;
+  font-weight: 800;
+  font-family: "Inter", sans-serif;
+  background-color: transparent;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.btn-outline-blue:hover {
+  background: #003366;
+  color: #fff;
+}
+
+/* Accordion Items under Directory */
+.faq-items-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-item {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  padding: 1.2rem;
+  background-color: transparent;
+  border: none;
+  text-align: left;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #111;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq-question.blue-bg {
+  background-color: #003366;
+  color: #fff;
+}
+
+.faq-answer {
+  padding: 0 1.2rem 1.2rem 1.2rem;
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.faq-answer p {
+  color: #111;
+  font-weight: 500;
+}
+
+/* --- FOOTER OVERRIDES --- */
+.contact-page-main ~ .footer {
+  background-color: #444444;
+  /* Dark gray */
+}
+
+@media (max-width: 900px) {
+  .contact-flex-row {
+    flex-direction: column;
   }
 
-  .contact-hero-title {
-    font-size: 3rem;
-  }
-
-  .form-card {
+  .contact-map-side {
+    width: 100%;
     padding: 2rem;
   }
 
-  .two-col {
+  .accordions-grid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
   }
 }
