@@ -19,6 +19,14 @@
   /* Offset for header */
 }
 
+/* Fallback background in case <img> or <picture> sources fail to render */
+.contact-hero-gis {
+  background-image: url("../images/66fa5063e44a93083c4c27e6_pexels-max-fischer-5212687.avif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .hero-bg-wrapper {
   position: absolute;
   top: 0;
@@ -67,6 +75,7 @@
   font-weight: 700;
   line-height: 1.1;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  color: #ffffff !important;
 }
 
 /* --- Main Layout --- */
@@ -93,7 +102,7 @@
 .contact-form-side {
   flex: 1;
   padding: 4rem;
-  color: #111;
+  color: #fff;
 }
 
 .contact-map-side {
@@ -119,6 +128,7 @@
   letter-spacing: 2.5px;
   text-transform: uppercase;
   margin-bottom: 1rem;
+  color: #fff;
 }
 
 .section-title-large {
@@ -161,7 +171,7 @@
   border-radius: 6px;
   padding: 1.2rem;
   font-family: "Inter", sans-serif;
-  color: #111;
+  color: #fff;
   font-size: 1rem;
   font-weight: 500;
   transition: all 0.3s ease;
@@ -170,7 +180,7 @@
 
 .input-group input::placeholder,
 .input-group textarea::placeholder {
-  color: #333;
+  color: rgba(255, 255, 255, 0.8);
   font-weight: 600;
 }
 
@@ -229,8 +239,8 @@
 .accordion-main-header {
   width: 100%;
   padding: 1.3rem;
-  background-color: #ffd700;
-  color: #111;
+  background-color: var(--mis-blue, #003366);
+  color: #fff;
   border: none;
   border-radius: 6px;
   font-family: "Inter", sans-serif;
@@ -306,39 +316,134 @@
 
 .faq-question {
   width: 100%;
-  padding: 1.2rem;
-  background-color: transparent;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
   border: none;
   text-align: left;
   font-family: "Inter", sans-serif;
   font-weight: 700;
-  font-size: 1rem;
-  color: #111;
+  font-size: 1.1rem;
+  color: #003366;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 
-.faq-question.blue-bg {
+.faq-question:hover {
+  background-color: #eef2f7;
+  color: #0056b3;
+}
+
+.faq-item.active .faq-question {
   background-color: #003366;
   color: #fff;
 }
 
 .faq-answer {
-  padding: 0 1.2rem 1.2rem 1.2rem;
-  font-size: 0.95rem;
-  color: #444;
-  line-height: 1.6;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.4s ease;
+  background-color: #fff;
+  opacity: 0;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 800px;
+  /* Increased for directory content */
+  padding: 1.5rem;
+  border-top: 1px solid #eee;
+  opacity: 1;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.4s ease, opacity 0.6s ease 0.1s;
+}
+
+/* Fade-in animation for the content inside the answer */
+.faq-answer>* {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.5s ease 0.2s;
+}
+
+.faq-item.active .faq-answer>* {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .faq-answer p {
-  color: #111;
-  font-weight: 500;
+  margin: 0;
+  color: #444;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.faq-item .icon {
+  font-size: 1.4rem;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .icon {
+  transform: rotate(45deg);
+  /* Plus becomes an x-like shape, or just rotate */
+}
+
+.directory-content p {
+  margin-bottom: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed #eee;
+  padding-bottom: 0.4rem;
+}
+
+.directory-content p:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.directory-content strong {
+  color: #003366;
+}
+
+.directory-accordion {
+  margin-bottom: 2rem;
+}
+
+.social-connect-content p {
+  margin-bottom: 1.2rem;
+  color: #444;
+}
+
+.social-links-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.social-link {
+  display: block;
+  padding: 0.8rem;
+  background: #f8f9fa;
+  color: #003366;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background: #003366;
+  color: #fff;
+}
+
+/* Connect with us section standardization placeholder header removal */
+.accordion-main-header {
+  display: none;
+  /* We are using the standardized faq-item structure now */
 }
 
 /* --- FOOTER OVERRIDES --- */
-.contact-page-main ~ .footer {
+.contact-page-main~.footer {
   background-color: #444444;
   /* Dark gray */
 }

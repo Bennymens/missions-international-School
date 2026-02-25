@@ -23,20 +23,27 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Accordion functionality for FAQ Section
-  const faqQuestions = document.querySelectorAll(".faq-question");
+  const faqItems = document.querySelectorAll(".faq-item");
 
-  faqQuestions.forEach((question) => {
-    question.addEventListener("click", () => {
-      const item = question.parentElement;
+  faqItems.forEach((item) => {
+    const question = item.querySelector(".faq-question");
 
-      // Optional: Close other items
-      const activeItem = document.querySelector(".faq-item.active");
-      if (activeItem && activeItem !== item) {
-        activeItem.classList.remove("active");
-      }
+    if (question) {
+      question.addEventListener("click", () => {
+        // Toggle current item
+        const isActive = item.classList.contains("active");
 
-      item.classList.toggle("active");
-    });
+        // Close all other items
+        faqItems.forEach((otherItem) => {
+          otherItem.classList.remove("active");
+        });
+
+        // If it wasn't active, open it
+        if (!isActive) {
+          item.classList.add("active");
+        }
+      });
+    }
   });
 
   // Scholarship Modal Functionality
