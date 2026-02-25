@@ -1447,7 +1447,7 @@ body {
 
 .newsletter-btn {
   padding: 10px 20px;
-  background-color: #2e8b57;
+  background-color: var(--color-primary-blue);
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -1457,7 +1457,7 @@ body {
 }
 
 .newsletter-btn:hover {
-  background-color: #247048;
+  background-color: #002244;
 }
 
 /* Social Icons */
