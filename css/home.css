@@ -357,6 +357,11 @@ body {
   margin-left: 4px;
 }
 
+/* Hide mobile-toggle buttons on desktop (injected by JS for mobile dropdowns) */
+.mobile-toggle {
+  display: none;
+}
+
 /* ============================
    EVENTS & WELCOME SPLIT
    ============================ */
