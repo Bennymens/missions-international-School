@@ -217,11 +217,20 @@ body {
 }
 
 .header-container {
-  max-width: 1400px;
-  margin: 0 auto;
+  max-width: 100%;
+  margin: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.logo-area {
+  margin-right: auto;
+  flex-shrink: 0;
+}
+
+.main-nav {
+  margin-right: auto;
 }
 
 /* Mobile: push logo and school name to the far left edge */
@@ -531,6 +540,9 @@ body {
   box-shadow: none;
   /* Remove shadow */
   transition: transform 0.3s;
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 .join-card:hover {
