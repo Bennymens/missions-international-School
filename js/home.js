@@ -457,4 +457,22 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   });
+  // Accordion Logic (Global)
+  const accordions = document.querySelectorAll(".accordion-header");
+  if (accordions.length > 0) {
+    accordions.forEach((header) => {
+      header.addEventListener("click", () => {
+        const item = header.parentElement;
+        item.classList.toggle("active");
+        const icon = header.querySelector(".icon");
+        if (icon) {
+          if (item.classList.contains("active")) {
+            if (icon.textContent === "+") icon.textContent = "-";
+          } else {
+            if (icon.textContent === "-") icon.textContent = "+";
+          }
+        }
+      });
+    });
+  }
 });
