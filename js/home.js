@@ -458,7 +458,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
   // Accordion Logic (Global)
-  const accordions = document.querySelectorAll(".accordion-header");
+  const accordions = document.querySelectorAll(".accordion-header, .faq-question");
   if (accordions.length > 0) {
     accordions.forEach((header) => {
       header.addEventListener("click", () => {
